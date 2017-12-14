@@ -1,6 +1,10 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: 'Cinzel', serif;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
 #nav-container {
@@ -14,68 +18,31 @@
 
 .overlay {
   position: absolute;
-  top: -98.8%;
+  top: -99.1%;
   height: 100%;
   left: 0;
   width: 100%;
   transition: all 0.4s ease;
-  background: #1b2f41; /* Old browsers */
-  background: -moz-linear-gradient(
-    left,
-    #1b2f41 0%,
-    #1a70b8 50%,
-    #1b2f41 100%
-  ); /* FF3.6-15 */
-  background: -webkit-linear-gradient(
-    left,
-    #1b2f41 0%,
-    #1a70b8 50%,
-    #1b2f41 100%
-  ); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(
-    to right,
-    #1b2f41 0%,
-    #1a70b8 50%,
-    #1b2f41 100%
-  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(
-      startColorstr="#1b2f41",
-      endColorstr="#1b2f41",
-      GradientType=1
-    ); /* IE6-9 */
-    z-index: 9998;
+  background: #c69f1f; /* Old browsers */
+  background: -moz-linear-gradient(left, #c69f1f 0%, #eddc21 46%, #eddc21 57%, #c69f1f 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #c69f1f 0%,#eddc21 46%,#eddc21 57%,#c69f1f 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #c69f1f 0%,#eddc21 46%,#eddc21 57%,#c69f1f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c69f1f', endColorstr='#c69f1f',GradientType=1 ); /* IE6-9 */
+  z-index: 9998;
+  display: flex;
+  align-items: center;
 }
 
 .anim {
   left: 0;
   top: 0;
   animation: menu-anim 1.2s 1 ease-out normal;
-  width: 22%;
+  width: 100%;
   transition: all 0.5s ease;
-  background: #1b2f41; /* Old browsers */
-  background: -moz-linear-gradient(
-    left,
-    #1b2f41 0%,
-    #1a70b8 99%
-  ); /* FF3.6-15 */
-  background: -webkit-linear-gradient(
-    left,
-    #1b2f41 0%,
-    #1a70b8 99%
-  ); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(
-    to right,
-    #1b2f41 0%,
-    #1a70b8 99%
-  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(
-      startColorstr="#1b2f41",
-      endColorstr="#1a70b8",
-      GradientType=1
-    ); /* IE6-9 */
-  -webkit-box-shadow: 9px 0px 23px -8px rgba(0, 0, 0, 0.86);
-  -moz-box-shadow: 9px 0px 23px -8px rgba(0, 0, 0, 0.86);
-  box-shadow: 9px 0px 23px -8px rgba(0, 0, 0, 0.86);
+  background: rgba(0, 0, 0, 0.86); /* Old browsers */
+  -webkit-box-shadow: 9px 0px 23px -8px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 9px 0px 23px -8px rgba(0, 0, 0, 0.8);
+  box-shadow: 9px 0px 23px -8px rgba(0, 0, 0, 0.8);
   z-index: 9998;
 }
 
@@ -88,47 +55,48 @@
   z-index: 9998;
 }
 
-ul {
+nav ul {
   width: 100%;
   text-align: center;
   margin-top: 100px;
   padding-left: 0;
   margin-left: -10px;
-  font-size: 2em;
-  font-weight: 800;
+  font-size: 1.5em;
+  font-weight: 600;
 }
 
-li {
-  margin: 10px 0;
+nav li {
+  margin: 8px 0;
 }
 
-a {
+nav a {
   text-decoration: none;
   color: white;
   position: relative;
   display: inline-block;
-  padding: 10px 0;
+  padding: 8px 0;
   overflow: hidden;
 }
 
-ul li a::after {
+nav ul li a::after {
   display: block;
-  border-radius: 2px;
+  margin: 0 auto;;
+  width: 28px;
   content: "";
   left: 0;
   bottom: -10px;
-  height: 5px;
+  height: 4px;
   background: #ffffff;
-  transform: translateY(-101%);
+  transform: translateY(-51%);
+  transition: all 0.8s ease;
 }
 
-ul li a::hover {
+nav ul li a:hover {
   text-decoration: none;
 }
 
-ul li a::after {
-  animation: border-anim 0.4s 1 ease normal;
-  transform: translateX(0);
+nav ul li a:hover::after {
+  width: 56px;
 }
 
 .toggle-icon {
@@ -264,61 +232,88 @@ ul li a::after {
 @-webkit-keyframes menu-anim {
   0% {
     left: 0;
-    top: -98.8%;
+    top: -99.1%;
     width: 100%;
+    background: #c69f1f;
   }
 
   33% {
     left: -99.5%;
-    top: -98.8%;
+    top: -99.1%;
     width: 100%;
+    background: #886c18;
   }
 
   66% {
     left: -99.5%;
     top: 0;
     width: 100%;
+    background: #3d300b;
   }
 
   100% {
     top: 0;
     left: 0;
-    width: 22%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
   }
 }
 
 /* HEADER */
 
 header {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background: #010101;
     overflow: hidden;
 }
 
 header > .header-full {
-    width: 80%;
-    height: 80%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
     background: #010101;
-    background-image: url(../img/portada-dvd.jpg);
+    background-image: url(../img/fondo-battlefront.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center center;
-    animation: zoom 30s ease forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-full img {
+  animation: zoom 9s ease forwards;
+  width: 100vw;
 }
 
 @-webkit-keyframes zoom {
     0% {
-        width: 80%;
-        height: 80%;
+      transform: scale(1);
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
     }
     100% {
-        width: 100%;
-        height: 100%;
+      transform: scale(.7);
+      -webkit-transform: scale(.7);
+      -moz-transform: scale(.7);
     }
 }
+
+/* FIN HEADER */
+
+/* QUERIES */
+
+@media screen and (max-width: 960px) {
+  @-webkit-keyframes zoom {
+    0% {
+      transform: scale(.9);
+      -webkit-transform: scale(.9);
+      -moz-transform: scale(.9);
+    }
+    100% {
+      transform: scale(1);
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+    }
+}
+} 
