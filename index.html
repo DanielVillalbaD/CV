@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Daniel Villalba Freak CV</title>
+</head>
+
+<body>
+    <nav id="nav-container">
+        <div class="toggle-icon">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <div class="overlay">
+            <ul>
+                <li>
+                    <a href="#">Portada</a>
+                </li>
+                <li>
+                    <a href="#">Quien Soy</a>
+                </li>
+                <li>
+                    <a href="#">Estudios</a>
+                </li>
+                <li>
+                    <a href="#">Experiencia</a>
+                </li>
+                <li>
+                    <a href="#">Sobre Mí</a>
+                </li>
+                <li>
+                    <a href="#">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <section class="header-full"></section>
+    </header>
+
+    <script src="js/main.js"></script>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".toggle-icon").click(function () {
+                $(".overlay").toggleClass("anim");
+            });
+
+            $(".animation").click(function () {
+                $(".anim").toggleClass("reverse-animation");
+            });
+            $(".toggle-icon").click(function () {
+                $("#nav-container").toggleClass("pushed");
+            });
+        });
+    </script>
+</body>
+
+</html>
