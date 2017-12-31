@@ -4,10 +4,53 @@
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
-h1, h2, h3, h4, nav >.overlay >ul >li {
+h1, h2, h3, h4, nav >.overlay >ul >li a {
   font-family: "Cinzel", serif;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+h2::after {
+  display: block;
+  margin: 0 auto;
+  width: 28px;
+  content: "";
+  left: 0;
+  height: 5px;
+  background: rgb(27, 27, 27);
+  transition: all 0.8s ease;
+}
+
+h2:hover::after {
+  width: 56px;
+}
+
+h3 {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1.2rem;
+  margin: 1.5rem 0 .2rem 0;
+  font-weight: 500;
+  font-style: oblique;
+}
+
+p, ul {
+  line-height: 1.4rem;
+  font-size: 1.1rem;
+}
+
+nav >.overlay >ul >li a {
+  line-height: 1.6rem;
+  font-size: 1.5rem;
 }
 
 /* MENU SUPERIOR */
@@ -364,7 +407,16 @@ header > .header-full {
 /* FIN SOCIAL MEDIA */
 /* FIN HEADER */
 /* QUERIES */
+@media screen and (max-width: 1366px) {
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
 @media screen and (max-width: 960px) {
+  h3 {
+    font-size: 1.4rem;
+  }
   @-webkit-keyframes zoom {
     0% {
       transform: scale(0.9);

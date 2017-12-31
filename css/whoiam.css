@@ -1,0 +1,103 @@
+#about-me h2 {
+    text-align: center;
+    margin-top: 90px;
+}
+
+.presentation {
+    display: flex;
+    max-width: 1600px;
+    margin: 90px 10% 0 10%;
+    align-items: center;
+    align-content: space-between;
+    justify-content: center; 
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.presentation .text-container {
+    flex: 1 1 auto;
+    margin-bottom: 32px;
+}
+
+.about-text {
+    padding-left: 4%;
+}
+
+
+.cvphoto {
+    flex: 0 1 40%;
+}
+
+blockquote {
+    max-width: 88%;
+    margin: 3.2rem 2rem 0 2.2rem;
+}
+
+blockquote:before {
+    position: absolute;
+    display: inline;
+    margin: -1.8rem 0 0 -3rem;
+    content: '"';
+    font-family: 'Courgette', cursive;
+    font-size: 5rem;
+}
+
+blockquote p {
+    font-family: 'Courgette', cursive;
+    font-size: 2rem;
+    line-height: 2.2rem;
+    color: 333;
+}
+
+cite {
+    font-size: 1rem;
+    float: right;
+    padding-right: 60px;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 10px;
+}
+
+/* ICONOS CONTACTO */
+
+
+.contact-icon {
+    list-style: none;
+    margin: 1rem 0 1rem 1.2rem;
+}
+
+.contact-icon i {
+    margin-right: 1rem;
+}
+
+/* QUERIES */
+@media screen and (max-width: 1366px) {
+
+    blockquote {
+        max-width: 94%;
+    }
+
+    blockquote p {
+        font-size: 1.6rem;
+        line-height: 1.7rem;
+    }
+
+    cite {
+        font-size: .8rem;
+        padding-right: 20px;
+    }
+}
+
+
+@media screen and (max-width: 960px) {
+    .presentation {
+        flex-wrap: wrap;
+        margin: 80px 5% 60px 5%;
+    }
+    .cvphoto img {
+       margin-bottom: 40px;
+    }
+
+    blockquote {
+        max-width: 90%;
+    }
+}
