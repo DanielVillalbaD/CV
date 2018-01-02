@@ -1,0 +1,12 @@
+#education {
+    padding-top: 90px;
+    background-color: #111;
+}
+
+.dark h2 {
+    color: #fafafa;
+}
+
+.dark h2::after {
+    background: #fafafa;
+}
