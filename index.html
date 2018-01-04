@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/starwars-glyphicons.css">
     <link href="https://fonts.googleapis.com/css?family=Cinzel|Courgette|Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/whoiam.css">
     <link rel="stylesheet" href="css/estudios.css">
+    <link rel="stylesheet" href="css/videoplayer.css">
     <title>Daniel Villalba Freak CV</title>
 </head>
 
@@ -51,9 +53,9 @@
             <ul class="sticky-ul">
                 <li><a href="#nav_container" title="Portada" class="menu-button">PORTADA</a><div class="blink"></div></li>
                 <li><a href="#about-me" title="Quién soy" class="menu-button">QUIEN SOY</a><div class="blink"></div></li>
-                <li><a href="#education" title="Estudios" class="menu-button">ESTUDIOS</a><div class="blink"></div></li>
-                <li><a href="#" title="Experiencia" class="menu-button">EXPERIENCIA</a><div class="blink"></div></li>
-                <li><a href="#" title="Sobre mí" class="menu-button">SOBRE MI</a><div class="blink"></div></li>
+                <li><a href="#education" title="Estudios" class="menu-button">INSTRUCCION</a><div class="blink"></div></li>
+                <li><a href="#" title="Experiencia" class="menu-button">COMBATE</a><div class="blink"></div></li>
+                <li><a href="#" title="Sobre mí" class="menu-button">HOLOGRAMA</a><div class="blink"></div></li>
                 <li><a href="#" title="Contacto" class="menu-button">CONTACTO</a><div class="blink"></div></li>
             </ul>
         </nav>  
@@ -72,9 +74,9 @@
                     </h3>
                     <p>
                         <ul class="contact-icon">
-                            <li><i class="fa fa-phone"></i><strong>Teléfono: </strong>661 667 702</li>
-                            <li><i class="fa fa-envelope-o"></i><strong>E-mail: </strong>hola@d4ni.es</li>
-                            <li><i class="fa fa-home"></i><strong>Residencia: </strong>Madrid</li>
+                            <li><i class="swg swg-hologram swg-2x"></i><strong>Teléfono: </strong>661 667 702</li>
+                            <li><i class="swg swg-xwing-3 swg-2x"></i><strong>E-mail: </strong>hola@d4ni.es</li>
+                            <li><i class="swg swg-jediorder swg-2x"></i><strong>Residencia: </strong>Madrid</li>
                         </ul>
                     </p>
                     <blockquote>
@@ -86,14 +88,73 @@
         </div>
     </section>
 
-    <section id="education" class="dark">
-        <h2>Estudios</h2>
+    <section id="edu-exp" class="dark">
+        <section class="darksection">
+            <div class="startabs dark">
+            
+                <ul>
+                    <li><a href="#educacion"><span>Instrucción</span></a></li>
+                    <li><a href="#experiencia"><span>Combate</span></a></li>
+                    <li><a href="#sobre-mi"><span>Holograma</span></a></li>
+                </ul>
+                
+                <div class="tabs-content">
+
+                    <section id="educacion">
+                        <ul>
+                            <li><a href="#relacionado">Relacionada</a></li>
+                            <li><a href="#oficial">Oficial</a></li>
+                            <li><a href="#otros">Otros</a></li>
+                        </ul> 
+                        <div id="relacionado">
+                            <ul>
+                                <li><i class="swg swg-yoda-3 swg-2x"></i>Full Stack Web Development Bootcamp<br /><span>En Curso - Keep Coding</span></li>
+                                <li><i class="swg swg-darthvader-4 swg-2x"></i>Curso de Programación Wordpress<br /><span>2016 - CodeWars</span></li>
+                                <li><i class="swg swg-obiwankenobi swg-2x"></i>Curso de Experto en Python<br /><span>2016 - CICE</span></li>                                
+                            </ul>
+                        </div>
+                        <div id="oficial">
+                            <ul>
+                                <li><i class="swg swg-galemp swg-2x"></i>Licenciatura de Ciencias Ambientales<br /><span>40% - SIN finalizar</span></li>
+                                <li><i class="swg swg-galrep swg-2x"></i>Ciclo Formativo G.S. Salud Ambiental<br /><span>Finalización Junio 2001</span></li>                               
+                            </ul>
+                        </div>
+                        <div id="otros">
+                            <ul>
+                                <li><i class="swg swg-c3po-o swg-2x"></i><b>Idiomas:</b> Inglés<br /><span>Comprensión lectora</span></li>
+                                <li><i class="swg swg-lightsabers-2 swg-2x"></i><b>Diseño:</b> Gráfico y Audiovisual<br /><span>Nivel Hobby</span></li>
+                                <li><i class="swg swg-deathstar-2 swg-2x"></i><b>Marketing:</b> SEO + SEM + SMO<br /><span>Google Adwords Partner</span></li>                                
+                            </ul>
+                        </div>
+                                   
+                    </section>
+                        
+                    <section id="experiencia">
+                    </section>
+
+                    <section id="sobre-mi">
+                        <div class="player">
+                            <video class="custom-video viewer" src="video/video_cv_480.mp4"></video>
+                            <div class="player-controls">
+                                <div class="progress">
+                                    <div class="progress-filled"></div>
+                                </div>
+                                <button class="player-button player-toggle" title="Reproducir"></button>
+                                <input type="range" name="Volumen" class="player-slider" min=0 max="1" step="0.05" value="1">
+                                <input type="range" name="Velocidad de reproducción" class="player-slider" min="0.5" max="2" step="0.1" value="1">
+                            </div>
+                        </div>  
+                    </section>
+                </div>
+            </div>         
+        </section>
     </section>
 
 </body>
 
 <footer>
     <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
     <script src="js/main.js"></script>
 </footer>
 

@@ -24,6 +24,14 @@ h2 {
   text-align: center;
 }
 
+.dark h2 {
+  color: #fafafa;
+}
+
+.dark h2::after {
+  background: #fafafa;
+}
+
 h2::after {
   display: block;
   margin: 0 auto;
@@ -62,6 +70,10 @@ nav > .overlay > ul > li a {
   font-size: 1.5rem;
 }
 
+.swg {
+  vertical-align: middle;
+}
+
 /* STICKY MENUS */
 
 .sticky-nav {
@@ -89,7 +101,7 @@ nav > .overlay > ul > li a {
 .sticky-menu li {
   width: calc(100% / 6);
   flex: 0 0 auto;
-  background: rgb(14, 14, 14);
+  background: #040404;
   height: 4rem;
   text-align: center;
   line-height: 4rem;
@@ -135,10 +147,10 @@ nav > .overlay > ul > li a {
   opacity: 0;
   -webkit-box-shadow: 0 0 7px 0 #00edff;
   box-shadow: 0 0 7px 0 #00edff;
-  -webkit-transition-duration: 0.2s;
-  -moz-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
 
 .sticky-menu li:nth-child(2) >.blink {
@@ -172,59 +184,71 @@ nav > .overlay > ul > li a {
 }
 
 @keyframes blink {
-  0% { opacity: .5; }
+  0% { opacity: .8; }
   2% { opacity: 1; }
-  4% { opacity: .6; }
+  4% { opacity: .8; }
   14% { opacity: 1; }
-  15% { opacity: .5; }
-  17% { opacity: .7; }
+  15% { opacity: .8; }
+  17% { opacity: .9; }
   18% { opacity: 1; }
   21% { opacity: .8; }
   30% { opacity: 1; }
-  31% { opacity: .6; }
+  31% { opacity: .8; }
+  35% { opacity: .9; }
+  36% { opacity: .7; }
   40% { opacity: .9; }
+  44% { opacity: .8; }
+  48% { opacity: .9; }
   50% { opacity: .7; }
   60% { opacity: 1; }
-  70% { opacity: .6; }
+  70% { opacity: .7; }
   71% { opacity: .8; }
   73% { opacity: 1; }
-  74% { opacity: .7; }
-  75% { opacity: .6;}
+  74% { opacity: .8; }
+  75% { opacity: .7;}
   79% { opacity: 1;}
-  84% { opacity: .6;}
-  90% { opacity: .8;}
-  95% { opacity: .5;}
-  99% { opacity: .9;}
+  84% { opacity: .9;}
+  88% { opacity: .8;}
+  90% { opacity: .7;}
+  95% { opacity: 1;}
+  97% { opacity: .8;}
+  100% { opacity: .9;}
 }
 @-webkit-keyframes blink {
-  0% { opacity: .7; }
+  0% { opacity: .8; }
   2% { opacity: 1; }
-  4% { opacity: .6; }
+  4% { opacity: .8; }
   14% { opacity: 1; }
-  15% { opacity: .5; }
-  17% { opacity: .7; }
+  15% { opacity: .8; }
+  17% { opacity: .9; }
   18% { opacity: 1; }
   21% { opacity: .8; }
   30% { opacity: 1; }
-  31% { opacity: .6; }
+  31% { opacity: .8; }
+  35% { opacity: .9; }
+  36% { opacity: .7; }
   40% { opacity: .9; }
+  44% { opacity: .8; }
+  48% { opacity: .9; }
   50% { opacity: .7; }
   60% { opacity: 1; }
-  70% { opacity: .6; }
+  70% { opacity: .7; }
   71% { opacity: .8; }
   73% { opacity: 1; }
-  74% { opacity: .7; }
-  75% { opacity: .6;}
+  74% { opacity: .8; }
+  75% { opacity: .7;}
   79% { opacity: 1;}
-  84% { opacity: .6;}
-  90% { opacity: .8;}
-  95% { opacity: .5;}
-  99% { opacity: .9;}
+  84% { opacity: .9;}
+  88% { opacity: .8;}
+  90% { opacity: .7;}
+  95% { opacity: 1;}
+  97% { opacity: .8;}
+  100% { opacity: .9;}
 }
 .sticky-menu li:hover
 .blink {
-  animation: blink 3s step-start 0s infinite;
-  -webkit-animation: blink 3s step-start 0s infinite;
+  animation: blink 9s step-start 0s infinite;
+  -webkit-animation: blink 9s step-start 0s infinite;
 }
 
 /* FIN STICKY MENUS */
@@ -431,7 +455,9 @@ nav > .overlay > ul > li a:hover::after {
     box-shadow: 0.4em 0 0.6em 0.1em rgba(22, 136, 253, 0.75);
   }
 }
-/* menu animation */
+
+/* MENU ANIMATION */
+
 @-webkit-keyframes menu-anim {
   0% {
     left: 0;
@@ -458,8 +484,10 @@ nav > .overlay > ul > li a:hover::after {
     background: rgba(0, 0, 0, 0.8);
   }
 }
+
 /* FULL SCREEN MENU FINISH */
 /* HEADER */
+
 header {
   width: 100vw;
   height: 100vh;
@@ -494,7 +522,9 @@ header > .header-full {
     -moz-transform: scale(0.7);
   }
 }
+
 /* SOCIAL MEDIA HEADER ICONS */
+
 .social-container {
   width: 100%;
   padding-top: 40px;
@@ -574,9 +604,11 @@ header > .header-full {
     color: #000;
   }
 }
+
 /* FIN SOCIAL MEDIA */
 /* FIN HEADER */
 /* QUERIES */
+
 @media screen and (max-width: 1366px) {
   h3 {
     font-size: 1.5rem;

@@ -1,12 +1,270 @@
-#education {
-    padding-top: 90px;
-    background-color: #111;
+#edu-exp {
+  padding-top: 40px;
+  background-color: #202020;
 }
 
-.dark h2 {
+.startabs > ul {
+  text-align: center;
+  margin: 50px 0 0;
+  padding: 0;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.startabs > ul > li {
+  display: inline-block;
+  background: #fff;
+  padding: 0.6rem 0;
+  position: relative;
+  width: calc(100% / 3);
+  margin: 0 0 0 -4px;
+}
+.startabs > ul > li a {
+  color: rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+  transition: 0.4s ease;
+  text-transform: uppercase;
+}
+.startabs > ul > li:before,
+.startabs > ul > li:after {
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.startabs > ul > li.ui-tabs-active:before,
+.startabs > ul > li.ui-tabs-active:after,
+.startabs > ul > li.ui-state-hover:before,
+.startabs > ul > li.ui-state-hover:after,
+.startabs > ul > li.ui-state-focus:before,
+.startabs > ul > li.ui-state-focus:after {
+  opacity: 1;
+}
+.startabs > ul > li:before,
+.startabs > ul > li.ui-state-active.ui-state-hover:before,
+.startabs > ul > li.ui-state-active.ui-state-focus:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  box-shadow: 0 2px 3px rgba(22, 195, 255, 0.5);
+  top: 50%;
+  bottom: 0px;
+  left: 5px;
+  right: 5px;
+  border-radius: 25%;
+}
+.startabs > ul > li:after,
+.startabs > ul > li.ui-state-active.ui-state-hover:after,
+.startabs > ul > li.ui-state-active.ui-state-focus:after {
+  content: "";
+  background: #fff;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 50%;
+  bottom: -6px;
+  margin-left: -6px;
+  transform: rotate(45deg);
+  box-shadow: inset 3px 3px 3px rgba(22, 195, 255, 0.6),
+    inset 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
+.startabs > ul > li.ui-state-hover:before,
+.startabs > ul > li.ui-state-focus:before {
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.6);
+}
+.startabs > ul > li.ui-state-hover:after,
+.startabs > ul > li.ui-state-focus:after {
+  box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.6),
+    inset 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
+.startabs > ul > li a:hover {
+    color: rgba(255, 255, 255, 0.5);
+  }
+.startabs > ul > li.ui-state-focus a {
+  color: rgba(255, 255, 255, 0.7);
+}
+.startabs > ul > li:focus {
+  outline: none;
+}
+.startabs > ul > li a:focus {
+  text-decoration: none;
+  outline: none;
+  text-shadow: 0 2px 3px rgba(255, 255, 255, 0.4);
+}
+.startabs > ul > li a span {
+  position: relative;
+  top: -0.5em;
+}
+.startabs.dark > ul {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+.startabs.dark > ul > li {
+  background: #202020;
+}
+.startabs.dark > ul > li:before,
+.startabs.dark > ul > li.ui-state-active.ui-state-hover:before,
+.startabs.dark > ul > li.ui-state-active.ui-state-focus:before {
+  box-shadow: 0 2px 3px rgba(255, 255, 255, 0.4);
+}
+.startabs.dark > ul > li:after,
+.startabs.dark > ul > li.ui-state-active.ui-state-hover:after,
+.startabs.dark > ul > li.ui-state-active.ui-state-focus:after {
+  background: #202020;
+  box-shadow: inset 3px 3px 3px rgba(255, 255, 255, 0.4),
+    inset 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+.startabs.dark > ul > li.ui-state-hover:before,
+.startabs.dark > ul > li.ui-state-focus:before {
+  box-shadow: none;
+}
+.startabs.dark > ul > li.ui-state-hover:after,
+.startabs.dark > ul > li.ui-state-focus:after {
+  box-shadow: inset 1px 1px 0px rgba(255, 255, 255, 0.4);
+}
+
+.startabs {
+  width: 92%;
+  margin: auto;
+}
+.tabs-content {
+  padding: 1.4rem 2.2rem;
+  min-height: 200px;
+}
+.darksection {
+  background: #202020;
+  color: #fff;
+  padding: 20px 0;
+}
+
+/* TABS CONTENT ELEMENTS */
+/* ABOUT ME TAB CONTENT */
+
+#sobre-mi {
+    text-align: center;
+}
+
+/* ABOUT ME TAB CONTENT */
+/* EDUCATION TAB CONTENT */
+
+#relacionado, #oficial, #otros {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+#relacionado ul, #oficial ul, #otros ul {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+}
+
+
+#educacion > div > ul {
+  margin: 2.2rem 0;
+  padding: 0;
+  position: relative;
+  list-style: none;
+}
+
+#educacion > div > ul li {
+  color: #fafafa;
+  padding: .5rem 0;
+}
+
+#educacion > div > ul > li span {
+  color: #bbb;
+  padding-left: 3.2rem;
+  font-size: .9rem;
+  font-style: italic;
+}
+
+#educacion i {
+  margin-right: 1rem;
+}
+
+/* EDUCATION INTERIOR TABS*/
+
+#educacion > ul {
+  text-align: center;
+  padding: 0;
+  position: relative;
+}
+
+#educacion > ul > li {
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+#educacion > ul > li:nth-child(1), #educacion > ul > li:nth-child(2) {
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+#educacion > ul > li a {
+  text-decoration: none;
+  padding: 0 .8rem;
+  color: rgba(255, 255, 255, 0.3);
+  transition: 0.4s ease;
+  outline: none;
+}
+
+#educacion > ul > li a:hover, #educacion > ul > li.ui-state-focus a {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* EDUCATION INTERIOR TABS*/
+/* EDUCATION TAB CONTENT */
+/* EXPERIENCE TAB CONTENT */
+
+#experiencia {
+    display: flex;
+}
+
+/* EXPERIENCE TAB CONTENT */
+/* TABS CONTENT ELEMENTS */
+
+@media screen and (min-width: 960px) {
+  .darksection {
+    width: 82%;
+    max-width: 1320px;
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+.tabs-content {
+  padding: .4rem 1.4rem;
+}
+
+@media screen and (max-width: 450px) {
+  .tabs-content {
+    padding: .2rem 1.4rem;
+  }
+
+  #educacion > div > ul li {
     color: #fafafa;
-}
-
-.dark h2::after {
-    background: #fafafa;
+    padding: .5rem 0;
+    font-size: .9rem;
+  }
 }

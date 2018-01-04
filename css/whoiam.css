@@ -1,5 +1,6 @@
 #about-me {
     padding-top: 90px;
+    background: url("../img/yoda.jpg") no-repeat fixed right bottom;
 }
 
 .presentation {
@@ -11,6 +12,7 @@
     justify-content: center; 
     flex-wrap: nowrap;
     flex-direction: row;
+    background: transparent;
 }
 
 .presentation .text-container {
@@ -94,6 +96,9 @@ cite {
 
 
 @media screen and (max-width: 960px) {
+    #about-me {
+        background-size: 75% 60%;
+    }
     .presentation {
         flex-wrap: wrap;
         margin: 80px 4% 0 4%;
@@ -128,6 +133,9 @@ cite {
 }
 
 @media screen and (max-width: 720px) {
+    #about-me {
+        background: none;
+    }
     .about-text ul {
         width: 86%;
         margin: 1rem auto;
