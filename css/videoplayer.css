@@ -1,0 +1,13 @@
+.player {
+    max-width: 852px;
+    position: relative;
+    margin: 0 auto;
+}
+
+video {
+    width: 100%;
+}
+
+.player-controls {
+    display: flex;
+}
