@@ -2,12 +2,107 @@
     max-width: 852px;
     position: relative;
     margin: 0 auto;
+    max-height: 470px;
+    overflow: hidden;
 }
 
 video {
     width: 100%;
+    object-fit: contain;
+    -o-object-fit: contain;
 }
 
 .player-controls {
+    position: absolute;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    bottom: 0px;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 50%, rgba(0,0,0,0.92) 100%);
+background: -webkit-linear-gradient(top, rgba(0,0,0,0) 50%,rgba(0,0,0,0.92) 100%);
+background: linear-gradient(to bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,0.92) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#eb000000',GradientType=0 );
+    transition: 1s easy;
+}
+
+.flex-item:nth-child(1) {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 1 1 100%;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    }
+
+.flex-item:nth-child(2) {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    }
+
+.flex-item:nth-child(3) {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    }
+
+.flex-item {
+    min-width: 50px;
+    padding: .2rem;
+    display: block;
+
+/* .flex-item:nth-child(1) {
+    -webkit-flex: 0 1 100%;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+    } */
+
+
+video.custom-video:hover + div.player-controls {
+    bottom: 0px;
+}
+.progress {
+    background: #123456;
+    width: 100%;
+    height: 1.6rem;
+    position: relative;
+    overflow: hidden;
+}
+.progress-bar {
+    max-width: 100%;
+    background: red;
+    height: 1rem;
 }

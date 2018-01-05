@@ -26,11 +26,8 @@ $("#educacion").tabs({
 
 const player = document.querySelector('.player');
 const video = player.querySelector('.viewer');
-const progress = player.querySelector('.progress');
-const progressBar = player.querySelector('.progress-bar');
 const playerToggle = player.querySelector('.playertoggle');
-const skipButtons = player.querySelectorAll('[data-skip]');
-const ranges = player.querySelectorAll('.player-slider');
+const mute = player.querySelector('.mute-button')
 
 
 //FUNCTIONS
@@ -47,38 +44,20 @@ function updateButton() {
   playerToggle.innerHTML = playericon;
 }
 
-function skip() {
-  video.currentTime += parseFloat(this.dataset.skip);
-}
-
-function progressBarUpdater() {
-  video[this.name] = this.value;
-}
-
-function handleProgress() {
-  const percent = (video.currentTime / video.duration) * 100;
-  progressBar.style.flexBasis = `${percent}%`;
-}
-
-function scrub(e) {
-  const scrubTime = (e.offsetX / profress.offsetWidth) * videoduration;
-  video.currentTime = scrubTime;  
+function mutePush() {
+  if( $("video").prop('muted') ) {
+    $("video").prop('muted', false);
+  } else { $("video").prop('muted', true);
+  }
+  const muteON = '<i class="fa fa-volume-up"></i>';
+  const muteOFF = '<i class="fa fa-volume-off"></i>';
+  const muteicon = $("video").prop('muted') ? muteOFF : muteON;
+  mute.innerHTML = muteicon;
 }
 
 //EVENT LISTENERS
 
 video.addEventListener('click', togglePlay);
 video.addEventListener('play', updateButton);
-video.addEventListener('pause', updateButton);
-video.addEventListener('timeupdate', handleProgress);
-
+mute.addEventListener('click', mutePush);
 playerToggle.addEventListener('click', togglePlay);
-skipButtons.forEach(button => button.addEventListener('click', skip));
-ranges.forEach(range => range.addEventListener('change', progressBarUpdater));
-ranges.forEach(range => range.addEventListener('mousemove', progressBarUpdater));
-
-let mousedown = false;
-progress.addEventListener('click', scrub);
-progress.addEventListener('mousemove', (e) => mousedown && scrub(e));
-progress.addEventListener('mousedown', () => mousedown = true);
-progress.addEventListener('mouseup', () => mousedown = false);
