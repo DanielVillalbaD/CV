@@ -36,73 +36,56 @@ video {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    background: -moz-linear-gradient(top, rgba(0,0,0,0) 50%, rgba(0,0,0,0.92) 100%);
-background: -webkit-linear-gradient(top, rgba(0,0,0,0) 50%,rgba(0,0,0,0.92) 100%);
-background: linear-gradient(to bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,0.92) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#eb000000',GradientType=0 );
-    transition: 1s easy;
+    transition: all 1s ease;
 }
-
-.flex-item:nth-child(1) {
-    -webkit-order: 0;
-    -ms-flex-order: 0;
-    order: 0;
-    -webkit-flex: 1 1 100%;
-    -ms-flex: 1 1 100%;
-    flex: 1 1 100%;
-    -webkit-align-self: center;
-    -ms-flex-item-align: center;
-    align-self: center;
-    }
-
-.flex-item:nth-child(2) {
-    -webkit-order: 0;
-    -ms-flex-order: 0;
-    order: 0;
-    -webkit-flex: 0 1 auto;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto;
-    -webkit-align-self: center;
-    -ms-flex-item-align: center;
-    align-self: center;
-    }
-
-.flex-item:nth-child(3) {
-    -webkit-order: 0;
-    -ms-flex-order: 0;
-    order: 0;
-    -webkit-flex: 0 1 auto;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto;
-    -webkit-align-self: center;
-    -ms-flex-item-align: center;
-    align-self: center;
-    }
 
 .flex-item {
-    min-width: 50px;
-    padding: .2rem;
-    display: block;
-
-/* .flex-item:nth-child(1) {
-    -webkit-flex: 0 1 100%;
-    -ms-flex: 0 1 100%;
-    flex: 0 1 100%;
-    } */
-
-
-video.custom-video:hover + div.player-controls {
-    bottom: 0px;
+    width: 3.4rem;
+    height: 3.4rem;
+    padding: .4rem;
+    margin: .4rem;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    cursor: pointer;
+    border: none;
+    align-items: center;
+    align-content: center;
+    display: inline-block; 
+    position: relative;   
+    background: none;
 }
-.progress {
-    background: #123456;
-    width: 100%;
-    height: 1.6rem;
-    position: relative;
-    overflow: hidden;
+
+.player-button i {
+    color: rgba(255, 255, 255, .8);
+    font-size: 1.8rem;
+    position: absolute;
+    text-shadow:#000 0px 1px 5px;
+    text-shadow:inset 4px 6px 10px -4px rgba(0,0,0,0.3), 0 1px 1px -1px rgba(66, 134, 244,0.5);
+    top: 1.4rem;
+    left: 1.4rem;
+    transition: all .5s ease;
+    transform: opacity 1s ease;
+    opacity: 0;
 }
-.progress-bar {
-    max-width: 100%;
-    background: red;
-    height: 1rem;
+
+.player-button i:hover, .player-button i:focus {
+    color: rgba(0, 0, 0, .75);
+    text-shadow:#fff 0px 1px 5px;
+    text-shadow:inset 4px 6px 10px -4px rgba(255,255,255,0.3), 0 1px 1px -1px rgba(66, 134, 244,0.5);
+}
+
+.player-button:focus {
+    outline: none;
+}
+
+.player-controls:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.player-controls:hover .player-button i {
+    opacity: 1;
 }

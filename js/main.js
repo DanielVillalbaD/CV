@@ -27,7 +27,8 @@ $("#educacion").tabs({
 const player = document.querySelector('.player');
 const video = player.querySelector('.viewer');
 const playerToggle = player.querySelector('.playertoggle');
-const mute = player.querySelector('.mute-button')
+const mute = player.querySelector('.mute-button');
+const controls = player.querySelector('.hide-controls');
 
 
 //FUNCTIONS
@@ -54,6 +55,7 @@ function mutePush() {
   const muteicon = $("video").prop('muted') ? muteOFF : muteON;
   mute.innerHTML = muteicon;
 }
+
 
 //EVENT LISTENERS
 
