@@ -29,6 +29,7 @@ const video = player.querySelector('.viewer');
 const playerToggle = player.querySelector('.playertoggle');
 const mute = player.querySelector('.mute-button');
 const controls = player.querySelector('.hide-controls');
+const expandclass = player.querySelector('.fa-expand');
 
 
 //FUNCTIONS
@@ -56,6 +57,13 @@ function mutePush() {
   mute.innerHTML = muteicon;
 }
 
+function expandToggle() {
+  const toexpand = '<i class="fa fa-expand expand-function"></i>';
+  const compress = '<i class="fa fa-compress expand-function"></i>';
+  if ($(".fa-expand")) {
+    expandclass.classList.toggle('fa-compress');
+  }
+}
 
 //EVENT LISTENERS
 
@@ -63,3 +71,4 @@ video.addEventListener('click', togglePlay);
 video.addEventListener('play', updateButton);
 mute.addEventListener('click', mutePush);
 playerToggle.addEventListener('click', togglePlay);
+expandclass.addEventListener('click', expandToggle);
