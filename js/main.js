@@ -20,6 +20,18 @@ $("#educacion").tabs({
   hide: ('slow', { duration: 300 }) 
 });
 
+/* STICKY MENU */
+
+let stickynav = document.getElementById("sticky-nav");
+let sticky = stickynav.offsetTop;
+
+function stickyNav() {
+  (window.pageYOffset) >= sticky ? stickynav.classList.add("sticky") : stickynav.classList.remove("sticky");
+}
+
+window.onscroll = function() {stickyNav()};
+
+
 /* VIDEO PLAYER */
 
 //GET ELEMENTS
@@ -28,7 +40,6 @@ const player = document.querySelector('.player');
 const video = player.querySelector('.viewer');
 const playerToggle = player.querySelector('.playertoggle');
 const mute = player.querySelector('.mute-button');
-const playerIcon = player.querySelector('.fa');
 //const expand = player.querySelector('.fa-expand');
 //const compress = player.querySelector('.expand-video');
 

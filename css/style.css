@@ -76,15 +76,23 @@ nav > .overlay > ul > li a {
 
 /* STICKY MENUS */
 
-.sticky-nav {
-  position: sticky;
-  width: 100vh;
+#sticky-nav {
+  width: 100%;
+  z-index: 99;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
 }
 
 .sticky-menu {
   height: 4rem;
   width: 100%;
   background: transparent;
+  -webkit-box-shadow: 0px 0px 24px 2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 24px 2px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 24px 2px rgba(0,0,0,0.75);
 }
 
 .sticky-menu ul {
@@ -101,7 +109,8 @@ nav > .overlay > ul > li a {
 .sticky-menu li {
   width: calc(100% / 6);
   flex: 0 0 auto;
-  background: #040404;
+  background: #101010;
+  box-shadow:inset 4px 5px 10px -4px rgba(255,255,255,0.2), 0 1px 1px -1px rgba(66, 134, 244,0.7), inset 8px 10px 30px 0px #000;
   height: 4rem;
   text-align: center;
   line-height: 4rem;
@@ -118,16 +127,18 @@ nav > .overlay > ul > li a {
   display: inline-block;
   height: 100%;
   width: 100%;
-  color: #fff;
+  color: rgba(255, 255, 255, .8);
+  text-shadow:#000 0px 1px 2px;
+  text-shadow:inset 4px 6px 10px -4px rgba(0,0,0,0.3), 0 1px 1px -1px rgba(66, 134, 244,0.5);
   text-decoration: none;
   margin: 0;
   padding: 0;
   z-index: 999;
-  transition: all .4s ease;
+  transition: all .25s ease;
 }
 
 .sticky-menu li a:hover {
-  letter-spacing: .2rem;
+  letter-spacing: .14rem;
 }
 
 .sticky-menu li:focus {
@@ -251,6 +262,43 @@ nav > .overlay > ul > li a {
   -webkit-animation: blink 9s step-start 0s infinite;
 }
 
+/* START RESPONSIVE ICONS */
+
+li a .swg {
+  color: rgba(255, 255, 255, .8);
+  font-size: 1.5rem;
+  text-shadow:#000 0px 1px 3px;
+  text-shadow:inset 2px 5px 4px -2px rgba(0,0,0,0.3), 0 1px 1px -1px rgba(66, 134, 244,0.5);
+  display: none;
+}
+
+li:hover a .swg, li:active a .swg {
+  color: rgba(255, 255, 255, .9);
+  text-shadow:#fff 0px 0px 20px;
+}
+
+p .swg, li .swg {
+  font-size: 1.9rem;
+}
+
+.swg-hologram {
+  font-size: 2rem !important;
+}
+
+.sticky-menu li span {
+  padding: 0 .4rem;
+}
+
+@media screen and (max-width: 960px) {
+  li a .swg {
+    display: inline-block;
+  }
+  .sticky-menu li span {
+    display: none;
+  }
+}
+
+/* FIN RESPONSIVE ICONS */
 /* FIN STICKY MENUS */
 /* FULL SCREEN MENU */
 
