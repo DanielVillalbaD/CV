@@ -10,6 +10,7 @@ video {
     width: 100%;
     object-fit: contain;
     -o-object-fit: contain;
+    transition: all .5s ease;
 }
 
 .player-controls {

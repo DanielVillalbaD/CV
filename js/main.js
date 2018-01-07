@@ -28,8 +28,9 @@ const player = document.querySelector('.player');
 const video = player.querySelector('.viewer');
 const playerToggle = player.querySelector('.playertoggle');
 const mute = player.querySelector('.mute-button');
-const controls = player.querySelector('.hide-controls');
-const expandclass = player.querySelector('.fa-expand');
+const playerIcon = player.querySelector('.fa');
+//const expand = player.querySelector('.fa-expand');
+//const compress = player.querySelector('.expand-video');
 
 
 //FUNCTIONS
@@ -37,13 +38,9 @@ const expandclass = player.querySelector('.fa-expand');
 function togglePlay() {
   const method = video.paused ? 'play' : 'pause';
   video[method]();
-}
-
-function updateButton() {
-  const playicon = '<i class="fa fa-play"></i>';
-  const pauseicon = '<i class="fa fa-pause"></i>';
-  const playericon = this.paused ? playicon : pauseicon;
-  playerToggle.innerHTML = playericon;
+  if ($(".fa-play")) {
+    playerIcon.classList.toggle('fa-pause');
+  }
 }
 
 function mutePush() {
@@ -57,18 +54,9 @@ function mutePush() {
   mute.innerHTML = muteicon;
 }
 
-function expandToggle() {
-  const toexpand = '<i class="fa fa-expand expand-function"></i>';
-  const compress = '<i class="fa fa-compress expand-function"></i>';
-  if ($(".fa-expand")) {
-    expandclass.classList.toggle('fa-compress');
-  }
-}
-
 //EVENT LISTENERS
 
+// expand.addEventListener('click', expandToggle);
 video.addEventListener('click', togglePlay);
-video.addEventListener('play', updateButton);
 mute.addEventListener('click', mutePush);
 playerToggle.addEventListener('click', togglePlay);
-expandclass.addEventListener('click', expandToggle);
