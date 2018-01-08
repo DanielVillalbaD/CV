@@ -131,8 +131,14 @@
 }
 .darksection {
   background: #181818;
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
   color: #fff;
   padding: 20px 0;
+  width: 86%;
+  max-width: 1320px;
 }
 
 /* TABS CONTENT ELEMENTS */
@@ -236,16 +242,33 @@
 /* EXPERIENCE TAB CONTENT */
 
 #experiencia {
-  display: flex;
   width: 100%;
 	margin: 0;
-	padding: 10px;
-	display: flex;
+	padding: .8rem;
+	display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 .accordion {
 	margin: auto;
-	width: 440px;
+  width: 475px;
+  margin: 1.1rem;
 }
 
 .accordion input {
@@ -256,7 +279,7 @@
 	position: relative;
   background: #fafafa;
   box-shadow: inset 2px 4px 4px 0px rgba(255,255,255,0.4), 0 1px 2px -1px rgba(66, 134, 244,0.7), inset 0px 0px 10px 0px #080808;
-  height: 64px;
+  height: 3.6rem;
   transition: all .15s ease-in-out;
 }
 
@@ -273,17 +296,21 @@
 }
 
 header.experience-box {
-	background: #222;
-	z-index: 100;
+	background: #252b2e;
 	cursor: initial;
-	box-shadow: 0 -1px 0 #e5e5e5, 0 0 2px -2px rgba(0,0,0,.12),0 2px 4px -4px rgba(0,0,0,.24), inset 1px 0px 18px 1px #000, inset 1px 1px 3px 0px #fff;
+	box-shadow: 0 -1px 0px #e5e5e5, 0 0 4px -2px rgba(0,0,0,.7), 0 2px 6px -4px rgba(0,0,0,1), inset 1px 0px 14px 1px #000, inset 1px 1px 3px 0px #fff;
 }
+
 header .box-title {
 	margin: 0;
-	font-weight: normal;
+	font-weight: bold;
 	font-size: 1rem;
-	color: white;
-	cursor: initial;
+  background: #fafafa; 
+  -webkit-background-clip: text; 
+  -moz-background-clip: text; 
+  background-clip: text; 
+  color: transparent; 
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4),0px -1px 1px rgba(255, 255, 255, 0.3);
 }
 
 section.experience-box:hover {
@@ -292,9 +319,9 @@ section.experience-box:hover {
 
 .box-title {
 	width: calc(100% - 2.8rem);
-	height: 64px;
-	line-height: 64px;
-	padding: 0 20px;
+	height: 3.6rem;
+	line-height: 3.6rem;
+	padding: 0 1.1rem;
   display: inline-block;
   color: rgba(0,0,0,.7);
 	cursor: pointer;
@@ -302,24 +329,24 @@ section.experience-box:hover {
 
 .box-content {
 	width: calc(100% - 2.8rem);
-	padding: 2rem 1.6rem;
-	font-size: 11pt;
+	padding: 1.8rem 1.6rem;
+	font-size: 1rem;
 	color: rgba(0,0,0,.7);
 	display: none;
 }
 
 .box-close {
 	position: absolute;
-	height: 2.2rem;
-  width: 2.2rem;
+	height: 2.4rem;
+  width: 2.4rem;
   background: #fafafa;
 	top: -0.7rem;
-  left: -1.1rem;
+  left: -1.25rem;
   color: #333;
 	cursor: pointer;
   display: none;
-  padding: .4rem;
-  font-size: 1.1rem;
+  padding: .25rem;
+  font-size: 1.4rem;
   text-align: center;
   border: solid 1px rgba(0, 0, 0, 0.54);
   border-radius: 50%;
@@ -344,7 +371,7 @@ section.experience-box:hover {
 
 input:checked + .experience-box {
 	height: auto;
-	margin: 16px 0;
+	margin: 1.1rem 0;
   box-shadow: 0 0 20px rgba(0, 174, 255, .6), 1px 1px 2px rgba(0, 174, 255, 1), -1px -1px 2px rgba(0, 174, 255, 1);
 }
 input:checked + .experience-box .box-title {
@@ -355,43 +382,67 @@ input:checked + .experience-box .box-close {
 	display: inline-block;
 }
 .arrows section .box-title {
-	padding-left: 44px;
-	width: calc(100% - 64px);
+	padding-left: 3rem;
+	width: calc(100% - 2.8rem);
 }
 .arrows section .box-title:before {
 	position: absolute;
 	display: block;
 	content: '\203a';
 	font-size: 1.4rem;
-	left: 20px;
-	top: -2px;
+	left: 1.5rem;
+	top: -0.15rem;
 	transition: transform .15s ease-in-out;
 	color: rgba(0,0,0,.54);
 }
 
 .arrows section .box-title:before + .box-title:hover {
-  left: 25px !important;
+  left: 1.8rem !important;
 }
 
-input:checked + section.box .box-title:before {
+input:checked + section.experience-box .box-title:before {
 	transform: rotate(90deg);
 }
 
 /* EXPERIENCE TAB CONTENT */
 /* TABS CONTENT ELEMENTS */
 
-@media screen and (min-width: 960px) {
+@media screen and (max-width: 1410px) {
+  .accordion {
+    width: 425px;
+    margin: 1rem .4rem;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .darksection {
+      width: 96%;
+    }
+
+    .accordion {
+      width: 370px;
+      margin: 1rem .4rem;
+    }
+
+@media screen and (max-width: 1024px) {
+  .accordion {
+    width: 360px;
+    margin: .9rem .3rem;
+  }
+
   .darksection {
-    width: 82%;
-    max-width: 1320px;
-    display: flex;
-    position: relative;
-    margin: 0 auto;
-    padding: 0;
+    width: 100%;
   }
 
   #edu-exp {
     padding-top: 0;
+  }
+}
+
+@media screen and (max-width: 960px) {
+
+  .accordion {
+    width: 340px;
+    margin: .9rem .2rem;
   }
 }
 
@@ -406,7 +457,7 @@ input:checked + section.box .box-title:before {
 
 @media screen and (max-width: 450px) {
   .tabs-content {
-    padding: .5rem 1.2rem;
+    padding: .5rem .6rem;
   }
 
   #educacion > div > ul li {
@@ -424,12 +475,18 @@ input:checked + section.box .box-title:before {
 
 @media screen and (max-width: 414px) {
   .tabs-content {
-    padding: 0rem 1.4rem;
+    padding: 0;
+    margin: .2rem 0;
   }
 
   #educacion > div > ul li {
     color: #fafafa;
     padding: .3rem 0rem;
+    font-size: .7rem;
+  }
+
+  #educacion > div > ul li span {
+    padding-left: 2.8rem;
     font-size: .76rem;
   }
 
@@ -437,7 +494,15 @@ input:checked + section.box .box-title:before {
     font-size: 1.2rem;
   }
 
-  .startabs ul li {
-    font-size: 1rem;
+  #educacion > ul li {
+    font-size: .8rem;
   }
+
+  .startabs ul li {
+    font-size: .8rem;
+  }
+
+  #experiencia, label.box-title, #experiencia div {
+  font-size: .8rem;
+}
 }

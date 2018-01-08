@@ -25,17 +25,26 @@ $("#educacion").tabs({
 const closericon = document.querySelector(".box-close");
 const closericon2 = document.querySelector(".sd-closer");
 const closericon3 = document.querySelector(".td-closer");
+const closericon4 = document.querySelector(".first-closer-2");
+const closericon5 = document.querySelector(".sd-closer-2");
+const closericon6 = document.querySelector(".td-closer-2");
 
 
 function closeBox () {
   $('#exp1').prop('checked', false);
   $('#exp2').prop('checked', false);
   $('#exp3').prop('checked', false);
+  $('#exp1-2').prop('checked', false);
+  $('#exp2-2').prop('checked', false);
+  $('#exp3-2').prop('checked', false);
 }
 
 closericon.addEventListener('click', closeBox);
 closericon2.addEventListener('click', closeBox);
 closericon3.addEventListener('click', closeBox);
+closericon4.addEventListener('click', closeBox);
+closericon5.addEventListener('click', closeBox);
+closericon6.addEventListener('click', closeBox);
 
 
 /* STICKY MENU */
