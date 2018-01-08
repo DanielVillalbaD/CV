@@ -20,6 +20,24 @@ $("#educacion").tabs({
   hide: ('slow', { duration: 300 }) 
 });
 
+/* EXPERIENCE CLOSER */
+
+const closericon = document.querySelector(".box-close");
+const closericon2 = document.querySelector(".sd-closer");
+const closericon3 = document.querySelector(".td-closer");
+
+
+function closeBox () {
+  $('#exp1').prop('checked', false);
+  $('#exp2').prop('checked', false);
+  $('#exp3').prop('checked', false);
+}
+
+closericon.addEventListener('click', closeBox);
+closericon2.addEventListener('click', closeBox);
+closericon3.addEventListener('click', closeBox);
+
+
 /* STICKY MENU */
 
 let stickynav = document.getElementById("sticky-nav");
@@ -40,6 +58,7 @@ const player = document.querySelector('.player');
 const video = player.querySelector('.viewer');
 const playerToggle = player.querySelector('.playertoggle');
 const mute = player.querySelector('.mute-button');
+const playerIcon = player.querySelector('.fa-play');
 //const expand = player.querySelector('.fa-expand');
 //const compress = player.querySelector('.expand-video');
 
@@ -49,9 +68,7 @@ const mute = player.querySelector('.mute-button');
 function togglePlay() {
   const method = video.paused ? 'play' : 'pause';
   video[method]();
-  if ($(".fa-play")) {
-    playerIcon.classList.toggle('fa-pause');
-  }
+  playerIcon.classList.toggle('fa-pause');
 }
 
 function mutePush() {

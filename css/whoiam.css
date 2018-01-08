@@ -191,6 +191,18 @@ cite {
     .about-text li {
         padding-left: 2%;
     }
+
+    .cvphoto img {
+        opacity: .4;
+        max-width: 98%;
+    }
+
+    #about-me {
+        padding-top: 80px;
+    }
+    .presentation {
+        margin: 30px 2% 0 2%;
+    }
     
     blockquote {
         margin: 3.2rem 0.4rem 0 0.4rem;
@@ -204,5 +216,15 @@ cite {
     cite {
         font-size: .7rem;
         padding-right: 20px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .presentation {
+        margin: 20px 1% 0 1%;
+    }
+
+    #about-me {
+        padding-top: 60px;
     }
 }
