@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Daniel Villalba Durán">
+    <meta name="description" content="Freak Currículum Vítae de Daniel Villalba. Creado como segunda práctica del Bootcamp de Keep Coding.">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/starwars-glyphicons.css">
     <link href="https://fonts.googleapis.com/css?family=Cinzel|Courgette|Montserrat" rel="stylesheet">
@@ -12,7 +15,9 @@
     <link rel="stylesheet" href="css/whoiam.css">
     <link rel="stylesheet" href="css/estudios.css">
     <link rel="stylesheet" href="css/videoplayer.css">
-    <title>Daniel Villalba Freak CV</title>
+    <link rel="stylesheet" href="css/contact.css">
+
+    <title>Daniel Villalba | Freak Star Wars CV</title>
 </head>
 
 <body>
@@ -89,7 +94,7 @@
     </section>
 
     <section id="edu-exp" class="dark">
-        <section class="darksection">
+        <div class="darksection">
             <div class="startabs dark">
             
                 <ul>
@@ -115,7 +120,7 @@
                         </div>
                         <div id="oficial">
                             <ul>
-                                <li><i class="swg swg-galemp"></i>Licenciatura de Ciencias Ambientales<br /><span>40% - SIN finalizar</span></li>
+                                <li><i class="swg swg-galemp"></i>Licenciatura de Ciencias Ambientales<br /><span>Sin intención de finalizar</span></li>
                                 <li><i class="swg swg-galrep"></i>Ciclo Formativo G.S. Salud Ambiental<br /><span>Finalización Junio 2001</span></li>                               
                             </ul>
                         </div>
@@ -139,43 +144,43 @@
                             <section class="experience-box">
                                 <label class="box-title" for="exp1">Resumen</label>
                                 <label class="box-close" for="acc-close"><i class="swg swg-lightsabers"></i></label>
-                                <div class="box-content">Bajo diversas marcas, como Brainit o miWeb10 y acuerdos de colaboración con otras agencias.</div>
+                                <p class="box-content">La imagen actúal de la marca es Brainit, si bien, una gran parte de mi actividad se basa en colaborar con otras agencias.</p>
                             </section>
                             <input type="radio" name="accordion" id="exp2" />
                             <section class="experience-box">
                                 <label class="box-title" for="exp2">Funciones</label>
                                 <label class="box-close sd-closer" for="acc-close"><i class="swg swg-lightsabers"></i></label>
-                                <div class="box-content">Trabajo principalmente en áreas de marketing digital y diseño web para un amplio abanico de clientes.</div>
+                                <p class="box-content">Trabajo principalmente en áreas de marketing digital y diseño web para un amplio abanico de clientes.</p>
                             </section>
                             <input type="radio" name="accordion" id="exp3" />
                             <section class="experience-box">
                                 <label class="box-title" for="exp3">Duracción</label>
                                 <label class="box-close td-closer" for="acc-close"><i class="swg swg-lightsabers"></i></label>
-                                <div class="box-content">Desde octubre de 2012, actualmente ejerciendo.</div>
+                                <p class="box-content">Desde octubre de 2012, actualmente ejerciendo.</p>
                             </section>
                         </nav>
 
                         <nav class="accordion arrows">
                             <header class="experience-box">
-                                <label for="acc-close" class="box-title">DIRECCIÓN DE MARKETING</label>
+                                <label class="box-title">DIRECCIÓN DE MARKETING</label>
                             </header>
                             <input type="radio" name="accordion" id="exp1-2" />
                             <section class="experience-box">
                                 <label class="box-title" for="exp1-2">Resumen</label>
-                                <label class="box-close first-closer-2" for="acc-close"><i class="swg swg-lightsabers"></i></label>
-                                <div class="box-content">Responsable de los departamentos de marketing y comercial de Sistemas Integrales de Calidad.</div>
+                                <label class="box-close st-closer-2" for="acc-close"><i class="swg swg-lightsabers"></i></label>
+                                <p class="box-content">Responsable de los departamentos de marketing y comercial de Sistemas Integrales de Calidad.</p>
                             </section>
                             <input type="radio" name="accordion" id="exp2-2" />
                             <section class="experience-box">
                                 <label class="box-title" for="exp2-2">Funciones</label>
                                 <label class="box-close sd-closer-2" for="acc-close"><i class="swg swg-lightsabers"></i></label>
-                                <div class="box-content">Gestión de grandes cuentas. Elaboración, planificación y ejecución de planes de marketing, etc.</div>
+                                <p class="box-content">Gestión cuentas. Elaboración, planificación y ejecución de planes de marketing, captación, etc.</p>
                             </section>
                             <input type="radio" name="accordion" id="exp3-2" />
                             <section class="experience-box">
                                 <label class="box-title" for="exp3-2">Duracción</label>
                                 <label class="box-close td-closer-2" for="acc-close"><i class="swg swg-lightsabers"></i></label>
-                                <div class="box-content">Aproximadamente 2 años, cesé en junio de 2012.</div>
+                                <p class="box-content">Aproximadamente 2 años, cesé en junio de 2012.</p>
                             </section>
                         </nav>
 
@@ -193,7 +198,32 @@
                     </section>
                 </div>
             </div>         
-        </section>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <form class="form" method="post" action="">
+            <input type="text" name="name" class="name" placeholder="Nombre">
+                    <p class="name-help">Mensaje nombre.</p>
+            <input type="email" name="email" class="email" placeholder="Email">
+            <input type="tel" name="telephone" class="tel" placeholder="Teléfono">
+                <p class="email-help">Mensaje email.</p>        
+                <p class="phone-help">Mensaje teléfono.</p>
+            <div><input type="checkbox" name="st_check" class="cbox1" value="Searchers"> <label for="cbox1"><span></span>Buscadores</label></div>
+            <div><input type="checkbox" name="sd_check" class="cbox2" value="Recomendation"> <label for="cbox2"><span></span>Recomendación</label></div>
+            <div><input type="checkbox" name="td_check" class="cbox3" value="knowme"> <label for="cbox3"><span></span>Me conoces</label></div>
+            <div><input type="checkbox" name="fd_check" class="cbox4" value="Other"> <label for="cbox4"><span></span>Otros</label></div>                    
+                    <p class="whoknown-help">Mensaje checkbox.</p>
+            <textarea name="user_comment" class="comment" placeholder="Por favor, escriba en 150 carácteres el motivo que le concierne" rows="6"></textarea>
+                <p class="comment-help">Mensaje comment.</p>
+            <div class="custom-submit">
+                <div id="line1"></div>
+                <div id="line2"></div>
+                <div id="line3"></div>
+                <div id="line4"></div>
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
     </section>
 
 </body>

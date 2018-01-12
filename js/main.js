@@ -11,12 +11,12 @@ $(".toggle-icon").click(function() {
 /* EDUCATION & EXPERIENCE TABS */
 
 $(".startabs").tabs({ 
-  show: ('slow', { duration: 800 }) ,
+  show: ('slow', { duration: 600 }),
   hide: ('slow', { duration: 400 }) 
 });
 
 $("#educacion").tabs({ 
-  show: ('slow', { duration: 600 }) ,
+  show: ('slow', { duration: 400 }),
   hide: ('slow', { duration: 300 }) 
 });
 
@@ -25,7 +25,7 @@ $("#educacion").tabs({
 const closericon = document.querySelector(".box-close");
 const closericon2 = document.querySelector(".sd-closer");
 const closericon3 = document.querySelector(".td-closer");
-const closericon4 = document.querySelector(".first-closer-2");
+const closericon4 = document.querySelector(".st-closer-2");
 const closericon5 = document.querySelector(".sd-closer-2");
 const closericon6 = document.querySelector(".td-closer-2");
 
