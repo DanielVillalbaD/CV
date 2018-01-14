@@ -17,6 +17,15 @@
     <link rel="stylesheet" href="css/videoplayer.css">
     <link rel="stylesheet" href="css/contact.css">
 
+    <!--[if IE 11]>
+        <style>
+            header .box-title {
+            background: transparent;
+            color: fff;
+         }
+        </style>
+    <![endif]-->
+
     <title>Daniel Villalba | Freak Star Wars CV</title>
 </head>
 
@@ -95,47 +104,44 @@
 
     <section id="edu-exp" class="dark">
         <div class="darksection">
-            <div class="startabs dark">
+            <div class="startabs">
             
                 <ul>
-                    <li><a href="#educacion"><span>Instrucción</span></a></li>
-                    <li><a href="#experiencia"><span>Combate</span></a></li>
-                    <li><a href="#sobre-mi"><span>Holograma</span></a></li>
+                    <li data="educacion" class="star-tab"><span>Instrucción</span></li>
+                    <li data="experiencia" class="star-tab tab-on"><span>Combate</span></li>
+                    <li data="sobre-mi" class="star-tab"><span>Holograma</span></li>
                 </ul>
-                
-                <div class="tabs-content">
 
-                    <section id="educacion">
+                <section id="educacion" class="tabs-content">
+                    <ul>
+                        <li>Relacionada</li>
+                        <li>Oficial</li>
+                        <li>Otros</li>
+                    </ul> 
+                    <div id="relacionado">
                         <ul>
-                            <li><a href="#relacionado">Relacionada</a></li>
-                            <li><a href="#oficial">Oficial</a></li>
-                            <li><a href="#otros">Otros</a></li>
-                        </ul> 
-                        <div id="relacionado">
-                            <ul>
-                                <li><i class="swg swg-yoda-3"></i>Full Stack Web Development Bootcamp<br /><span>En Curso - Keep Coding</span></li>
-                                <li><i class="swg swg-darthvader-4"></i>Curso de Programación Wordpress<br /><span>2016 - CodeWars</span></li>
-                                <li><i class="swg swg-obiwankenobi"></i>Curso de Experto en Python<br /><span>2016 - CICE</span></li>                                
-                            </ul>
-                        </div>
-                        <div id="oficial">
-                            <ul>
-                                <li><i class="swg swg-galemp"></i>Licenciatura de Ciencias Ambientales<br /><span>Sin intención de finalizar</span></li>
-                                <li><i class="swg swg-galrep"></i>Ciclo Formativo G.S. Salud Ambiental<br /><span>Finalización Junio 2001</span></li>                               
-                            </ul>
-                        </div>
-                        <div id="otros">
-                            <ul>
-                                <li><i class="swg swg-c3po-o"></i><b>Idiomas:</b> Inglés<br /><span>Comprensión lectora</span></li>
-                                <li><i class="swg swg-lightsabers-2"></i><b>Diseño:</b> Gráfico y Audiovisual<br /><span>Nivel Hobby</span></li>
-                                <li><i class="swg swg-deathstar-2"></i><b>Marketing:</b> SEO + SEM + SMO<br /><span>Google Adwords Partner</span></li>                                
-                            </ul>
-                        </div>
-                                   
-                    </section>
-                        
-                    <section id="experiencia">
-                        
+                            <li><i class="swg swg-yoda-3"></i>Full Stack Web Development Bootcamp<br /><span>En Curso - Keep Coding</span></li>
+                            <li><i class="swg swg-darthvader-4"></i>Curso de Programación Wordpress<br /><span>2016 - CodeWars</span></li>
+                            <li><i class="swg swg-obiwankenobi"></i>Curso de Experto en Python<br /><span>2016 - CICE</span></li>                                
+                        </ul>
+                    </div>
+                    <div id="oficial">
+                        <ul>
+                            <li><i class="swg swg-galemp"></i>Licenciatura de Ciencias Ambientales<br /><span>Sin intención de finalizar</span></li>
+                            <li><i class="swg swg-galrep"></i>Ciclo Formativo G.S. Salud Ambiental<br /><span>Finalización Junio 2001</span></li>                               
+                        </ul>
+                    </div>
+                    <div id="otros">
+                        <ul>
+                            <li><i class="swg swg-c3po-o"></i><b>Idiomas:</b> Inglés<br /><span>Comprensión lectora</span></li>
+                            <li><i class="swg swg-lightsabers-2"></i><b>Diseño:</b> Gráfico y Audiovisual<br /><span>Nivel Hobby</span></li>
+                            <li><i class="swg swg-deathstar-2"></i><b>Marketing:</b> SEO + SEM + SMO<br /><span>Google Adwords Partner</span></li>                                
+                        </ul>
+                    </div>                               
+                </section>
+                    
+                <section id="experiencia" class="tabs-content tab-on">
+                    <section class="experience-container">               
                         <nav class="accordion arrows">
                             <header class="experience-box">
                                 <label for="acc-close" class="box-title">FREELANCE</label>
@@ -183,20 +189,19 @@
                                 <p class="box-content">Aproximadamente 2 años, cesé en junio de 2012.</p>
                             </section>
                         </nav>
+                    </section>    
+                </section>
 
-                    </section>
-
-                    <section id="sobre-mi">
-                        <div class="player">
-                            <video class="viewer" src="video/video_cv_480.mp4"></video>
-                            <div class="player-controls">
-                                <button class="flex-item player-button playertoggle" title="Reproducir"><i class="fa fa-play"></i></button>
-                                <button class="flex-item player-button mute-button"><i class="fa fa-volume-up"></i></button>
-                           <!-- <button class="flex-item player-button expand-toggle" name="expand"><i class="fa fa-expand expand-function"></i></button> Expand Option-->
-                            </div>
-                        </div>  
-                    </section>
-                </div>
+                <section id="sobre-mi" class="tabs-content">
+                    <div class="player">
+                        <video class="viewer" src="video/video_cv_480.mp4"></video>
+                        <div class="player-controls">
+                            <button class="flex-item player-button playertoggle" title="Reproducir"><i class="fa fa-play"></i></button>
+                            <button class="flex-item player-button mute-button"><i class="fa fa-volume-up"></i></button>
+                        <!-- <button class="flex-item player-button expand-toggle" name="expand"><i class="fa fa-expand expand-function"></i></button> Expand Option-->
+                        </div>
+                    </div>  
+                </section>
             </div>         
         </div>
     </section>
@@ -230,7 +235,6 @@
 
 <footer>
     <script src="js/jquery.js"></script>
-    <script src="js/jquery-ui.js"></script>
     <script src="js/main.js"></script>
 </footer>
 

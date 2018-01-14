@@ -8,7 +8,7 @@ $(".toggle-icon").click(function() {
   $("#nav-container").toggleClass("pushed");
 });
 
-/* EDUCATION & EXPERIENCE TABS */
+/* JQUERY UI EDUCATION & EXPERIENCE TABS 
 
 $(".startabs").tabs({ 
   show: ('slow', { duration: 600 }),
@@ -19,6 +19,39 @@ $("#educacion").tabs({
   show: ('slow', { duration: 400 }),
   hide: ('slow', { duration: 300 }) 
 });
+
+JQUERY UI EDUCATION & EXPERIENCE TABS */
+
+/* NO JQUERYUI TABS */
+
+/* WHYYY DON'T WORK ??  !!!!
+
+const startab = document.querySelector("ul li.star-tab");
+const tabcontent = document.querySelector(".tabs-content");
+
+function lumusTab () {
+  let tab_id = $(this).attr("data-tab");
+
+  startab.removeClass("tab-on");
+  $(".tabs-content").removeClass("tab-on");
+
+  $(this).addClass("tab-on");
+  $("#"+tab_id).addClass("tab-on");
+}
+
+startab.addEventListener('click', lumusTab); */
+
+$('ul li.star-tab').click(function(){
+  let tab_on = $(this)[0].getAttribute('data');
+
+  $('ul li.star-tab').removeClass('tab-on');
+  $('.tabs-content').removeClass('tab-on');
+
+  $(this).addClass('tab-on');
+  $("#"+tab_on).addClass('tab-on');
+})
+
+/* NO JQUERYUI TABS */
 
 /* EXPERIENCE CLOSER */
 

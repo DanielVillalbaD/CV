@@ -364,6 +364,36 @@ p .swg, li .swg {
   background: rgba(0, 0, 0, 0.9);
   z-index: 9998;
 }
+
+/* MENU ANIMATION */
+
+@-webkit-keyframes menu-anim {
+  0% {
+    left: 0;
+    top: -99.1%;
+    width: 100%;
+    background: #c6b51f;
+  }
+  33% {
+    left: -99.5%;
+    top: -99.1%;
+    width: 100%;
+    background: #caac25;
+  }
+  66% {
+    left: -99.5%;
+    top: 0;
+    width: 100%;
+    background: #bba421;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+  }
+}
+
 nav > .overlay > ul {
   width: 100%;
   text-align: center;
@@ -386,18 +416,18 @@ nav > .overlay > ul > li a {
 nav > .overlay > ul > li a::after {
   display: block;
   margin: 0 auto;
-  width: 36px;
+  width: 2.9rem;
   content: "";
   left: 0;
   height: 0.15rem;
   background: #ffffff;
-  transition: all 0.8s ease;
+  transition: all 0.4s ease;
 }
 nav > .overlay > ul > li a:hover {
   text-decoration: none;
 }
 nav > .overlay > ul > li a:hover::after {
-  width: 56px;
+  width: 4rem;
 }
 /* Sabers Toggle */
 .toggle-icon {
@@ -405,9 +435,11 @@ nav > .overlay > ul > li a:hover::after {
   position: relative;
   width: 100px;
   margin: -2em auto 0 1em;
+
   -webkit-transition: margin 900ms;
   -moz-transition: margin 900ms;
   transition: margin 900ms;
+
   cursor: pointer;
   z-index: 9999;
   top: 50px;
@@ -419,9 +451,7 @@ nav > .overlay > ul > li a:hover::after {
   margin: 0.7em;
   border-right: 2.8em solid #fff;
   border-left: 0.6em solid #c3c3c3;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+
   -webkit-transition-property: -webkit-transform, margin, border-right-color,
     box-shadow;
   -moz-transition-property: -moz-transform, margin, border-right-color,
@@ -505,35 +535,6 @@ nav > .overlay > ul > li a:hover::after {
   }
   100% {
     box-shadow: 0.4em 0 0.6em 0.1em rgba(22, 136, 253, 0.75);
-  }
-}
-
-/* MENU ANIMATION */
-
-@-webkit-keyframes menu-anim {
-  0% {
-    left: 0;
-    top: -99.1%;
-    width: 100%;
-    background: #c6b51f;
-  }
-  33% {
-    left: -99.5%;
-    top: -99.1%;
-    width: 100%;
-    background: #caac25;
-  }
-  66% {
-    left: -99.5%;
-    top: 0;
-    width: 100%;
-    background: #bba421;
-  }
-  100% {
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.8);
   }
 }
 
