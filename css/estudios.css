@@ -1,5 +1,5 @@
 #edu-exp {
-  padding-top: 40px;
+  padding: 60px 0;
   width: 100vw;
   background-color: #121212;
 }
@@ -11,14 +11,13 @@
   margin: 0 auto;
   padding: 0;
   color: #fff;
-  padding: 20px 0;
   width: 86%;
   max-width: 1320px;
 }
 
 .startabs > ul {
   text-align: center;
-  margin: 50px 0 0;
+  margin: 20px 0;
   padding: 0;
   position: relative;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -411,9 +410,6 @@ input:checked + section.experience-box .box-title:before {
     width: 100%;
   }
 
-  #edu-exp {
-    padding-top: 0;
-  }
 }
 
 @media screen and (max-width: 960px) {
@@ -444,7 +440,7 @@ input:checked + section.experience-box .box-title:before {
 }
 
 #edu-exp {
-  padding: 0;
+  padding: 20px 0;
 }
 
 .accordion {
@@ -500,5 +496,5 @@ input:checked + section.experience-box .box-title:before {
 
   #experiencia, label.box-title, #experiencia div {
   font-size: .8rem;
-}
+  }
 }

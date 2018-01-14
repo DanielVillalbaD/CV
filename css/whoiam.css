@@ -1,12 +1,13 @@
 #about-me {
     padding-top: 90px;
+    background: #fafafa;
     /* background: url("../img/yoda.jpg") no-repeat fixed right bottom; */
 }
 
 .presentation {
     display: flex;
     max-width: 1600px;
-    margin: 60px 10% 0 10%;
+    margin: 60px 5% 0 5%;
     align-items: center;
     align-content: space-between;
     justify-content: center; 
@@ -17,7 +18,7 @@
 
 .presentation .text-container {
     flex: 1 1 auto;
-    margin-bottom: 32px;
+    margin-bottom: 30px;
 }
 
 .about-text {
@@ -29,7 +30,7 @@
 }
 
 .cvphoto {
-    flex: 0 1 40%;
+    flex: 0 1 50%;
 }
 
 .cvphoto img {
@@ -77,9 +78,9 @@ cite {
 }
 
 /* QUERIES */
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1400px) {
     .presentation {
-        margin: 60px 8% 0 8%;
+        margin: 60px 5% 0 2%;
     }
     blockquote {
         margin: 3.2rem .3rem 0 1.4rem;
@@ -95,13 +96,11 @@ cite {
 }
 
 
-@media screen and (max-width: 960px) {
-    #about-me {
-        background-size: 75% 60%;
-    }
+@media screen and (max-width: 1024px) {
+
     .presentation {
         flex-wrap: wrap;
-        margin: 80px 4% 0 4%;
+        margin: 60px 4% 0 4%;
         position: relative;
     }
     .cvphoto {
@@ -133,12 +132,13 @@ cite {
 }
 
 @media screen and (max-width: 720px) {
-    #about-me {
-        background: none;
+
+    .presentation .text-container {
+        margin-bottom: 0;
     }
+
     .about-text ul {
         width: 86%;
-        margin: 1rem auto;
     }
 
     .about-text li {
@@ -154,10 +154,6 @@ cite {
 
 @media screen and (max-width: 540px) {
 
-    .presentation .text-container {
-        margin-bottom: 0;
-    }
-
     .about-text ul {
         width: 90%;
         margin: 1rem auto;
@@ -172,12 +168,12 @@ cite {
     }
 
     blockquote p {
-        font-size: 1.2rem;
-        line-height: 1.4rem;
+        font-size: 1.4rem;
+        line-height: 1.5rem;
     }
 
     cite {
-        font-size: .7rem;
+        font-size: .8rem;
         padding-right: 20px;
     }
 }
@@ -185,7 +181,6 @@ cite {
 
     .about-text ul {
         width: 100%;
-        margin: 1rem auto;
     }
 
     .about-text li {
@@ -198,19 +193,19 @@ cite {
     }
 
     #about-me {
-        padding-top: 80px;
+        padding-top: 60px;
     }
     .presentation {
         margin: 30px 2% 0 2%;
     }
     
     blockquote {
-        margin: 3.2rem 0.4rem 0 0.4rem;
+        margin: 2.8rem 0.4rem 0 0.4rem;
     }
 
     blockquote p {
-        font-size: 1.2rem;
-        line-height: 1.4rem;
+        font-size: 1.15rem;
+        line-height: 1.3rem;
     }
 
     cite {
@@ -221,10 +216,17 @@ cite {
 
 @media screen and (max-width: 414px) {
     .presentation {
-        margin: 20px 1% 0 1%;
+        margin: 15px 1% 0 1%;
     }
 
     #about-me {
-        padding-top: 60px;
+        padding-top: 30px;
+    }
+
+    blockquote {
+        margin: 1.4rem 0.4rem 0 0.4rem;
+    }
+    .about-text h3 {
+        font-size: 1.3rem;
     }
 }
