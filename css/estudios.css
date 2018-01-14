@@ -118,8 +118,18 @@
   display: none;
 }
 
-section .tab-on {
+section.tab-on {
   display: block;
+  animation: tabs-in 1s ease-out normal;
+}
+
+@-webkit-keyframes tabs-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* TABS CONTENT ELEMENTS */
@@ -190,7 +200,7 @@ section .tab-on {
   text-decoration: none;
   padding: 0 .8rem;
   color: rgba(255, 255, 255, 0.3);
-  transition: 0.4s ease;
+  transition: all 0.4s ease;
   outline: none;
   cursor: pointer;
 }
@@ -199,8 +209,17 @@ section .tab-on {
   border-right: 1px solid rgba(255, 255, 255, 0.4);
 }
 
-#educacion > ul > li:hover, #educacion > ul > li:focus {
+#educacion > ul > li:hover, #educacion > ul > li.tab-on {
   color: rgba(255, 255, 255, 0.8);
+}
+
+#educacion div {
+  display: none;
+}
+
+#educacion div.tab-on {
+  display: flex;
+  animation: tabs-in 1s ease-out normal;
 }
 
 /* EDUCATION INTERIOR TABS*/
@@ -262,6 +281,7 @@ header .box-title {
 	font-size: 1rem;
   color: #dfdfdf;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, .8), inset 1px 1px 1px #000;
+  cursor: auto;
 }
 
 section.experience-box:hover {

@@ -51,6 +51,16 @@ $('ul li.star-tab').click(function(){
   $("#"+tab_on).addClass('tab-on');
 })
 
+$('ul li.tab-off').click(function(){
+  let tab_on = $(this)[0].getAttribute('data');
+
+  $('ul li.tab-off').removeClass('tab-on');
+  $('#educacion div').removeClass('tab-on');
+
+  $(this).addClass('tab-on');
+  $("#"+tab_on).addClass('tab-on');
+})
+
 /* NO JQUERYUI TABS */
 
 /* EXPERIENCE CLOSER */
