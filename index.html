@@ -29,12 +29,12 @@
         </div>
         <div class="overlay">
             <ul>
-                <li><a href="#">PORTADA</a></li>
-                <li><a href="#">QUIÉN SOY</a></li>
-                <li><a href="#">ESTUDIOS</a></li>
-                <li><a href="#">EXPERIENCIA</a></li>
-                <li><a href="#">SOBRE MÍ</a></li>
-                <li><a href="#">CONTACTO</a></li>
+                <li><a href="#portada">PORTADA</a></li>
+                <li><a href="#about-me">QUIÉN SOY</a></li>
+                <li><a href="#educacion">ESTUDIOS</a></li>
+                <li><a href="#experiencia">EXPERIENCIA</a></li>
+                <li><a href="#sobre-mi">SOBRE MÍ</a></li>
+                <li><a href="#contacto">CONTACTO</a></li>
             </ul>
             <div class="social-container">
                 <ul class="social-icon">
@@ -56,12 +56,12 @@
     <section id="sticky-nav">
         <nav class="sticky-menu">
             <ul class="sticky-ul">
-                <li><a href="#nav_container" title="Portada" class="menu-button"><i class="swg swg-reball"></i><span>PORTADA</span></a><div class="blink"></div></li>
-                <li><a href="#about-me" title="Quién soy" class="menu-button"><i class="swg swg-jediorder"></i><span>QUIEN SOY</a><div class="blink"></div></li>
-                <li><a href="#education" title="Estudios" class="menu-button"><i class="swg swg-combatdrone"></i><span>INSTRUCCION</span></a><div class="blink"></div></li>
-                <li><a href="#" title="Experiencia" class="menu-button"><i class="swg swg-tie"></i><span>COMBATE</span></a><div class="blink"></div></li>
-                <li><a href="#" title="Sobre mí" class="menu-button"><i class="swg swg-hologram"></i><span>HOLOGRAMA</span></a><div class="blink"></div></li>
-                <li><a href="#" title="Contacto" class="menu-button"><i class="swg swg-r2d2"></i><span>CONTACTO</span></a><div class="blink"></div></li>
+                <li><a href="#portada" title="Portada" class="menu-button blink"><i class="swg swg-reball"></i><span>PORTADA</span></a></li>
+                <li><a href="#about-me" title="Quién soy" class="menu-button"><i class="swg swg-jediorder"></i><span>QUIEN SOY</a></li>
+                <li><a href="#educacion" title="Estudios" class="menu-button"><i class="swg swg-combatdrone"></i><span>INSTRUCCION</span></a></li>
+                <li><a href="#experiencia" title="Experiencia" class="menu-button"><i class="swg swg-tie"></i><span>COMBATE</span></a></li>
+                <li><a href="#sobre-mi" title="Sobre mí" class="menu-button"><i class="swg swg-hologram"></i><span>HOLOGRAMA</span></a></li>
+                <li><a href="#contacto" title="Contacto" class="menu-button"><i class="swg swg-r2d2"></i><span>CONTACTO</span></a></li>
             </ul>
         </nav>  
     </section>
@@ -85,8 +85,8 @@
                         </ul>
                     </p>
                     <blockquote>
-                        <p>Cuando decidas hacer algo, sea lo que sea, haz que merezca la pena haberlo hecho. Y si no, que no puedas reprocharte no haber dado todo lo que había en ti.</p>
-                        <p><cite>Una frase propia que me inspira</cite></p>
+                        <p>Hazlo o no lo hagas, pero no lo intentes.</p>
+                        <p><cite>Maestro Yoda</cite></p>
                     </blockquote>
                 </div>
             </div>
@@ -198,7 +198,7 @@
     </section>
 
     <section id="contacto">
-        <form class="form" method="post" action="">
+        <form class="form" method="post" action="" novalidate>
             <input type="text" name="name" class="name" placeholder="Nombre">
                     <p class="name-help">Mensaje nombre.</p>
             <input type="email" name="email" class="email" placeholder="Email">
@@ -227,6 +227,7 @@
 <footer>
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/scrollspy.js"></script>
 </footer>
 
 </html>

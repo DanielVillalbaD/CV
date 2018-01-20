@@ -8,41 +8,26 @@ $(".toggle-icon").click(function() {
   $("#nav-container").toggleClass("pushed");
 });
 
-/* JQUERY UI EDUCATION & EXPERIENCE TABS 
+/* SABER LASER */
+/* IMG MOUSE MOVEMENT */
+/* BACK LATER
+var bfParody = document.querySelector('.header-full img');
 
-$(".startabs").tabs({ 
-  show: ('slow', { duration: 600 }),
-  hide: ('slow', { duration: 400 }) 
-});
-
-$("#educacion").tabs({ 
-  show: ('slow', { duration: 400 }),
-  hide: ('slow', { duration: 300 }) 
-});
-
-JQUERY UI EDUCATION & EXPERIENCE TABS */
-
-/* NO JQUERYUI TABS */
-
-/* WHYYY DON'T WORK ??  !!!!
-
-const startab = document.querySelector("ul li.star-tab");
-const tabcontent = document.querySelector(".tabs-content");
-
-function lumusTab () {
-  let tab_id = $(this).attr("data-tab");
-
-  startab.removeClass("tab-on");
-  $(".tabs-content").removeClass("tab-on");
-
-  $(this).addClass("tab-on");
-  $("#"+tab_id).addClass("tab-on");
+function mouseReact(event) {
+  console.log('hola');
+  var mouseconst = event.pageX * -1 + event.pageY * -1;
+  this.style.transform = `rotateZ(${mouseconst}deg)`;
+  this.style.transform = `rotateY(${mouseconst/2}deg)`;
+  this.style.transform = `rotateX(${mouseconst/2}deg)`;
 }
 
-startab.addEventListener('click', lumusTab); */
+bfParody.addEventListener('mousemove', mouseReact);
+*/
+/* IMG MOUSE MOVEMENT */
+/* JQUERY TABS */
 
 $('ul li.star-tab').click(function(){
-  let tab_on = $(this)[0].getAttribute('data');
+  var tab_on = $(this)[0].getAttribute('data');
 
   $('ul li.star-tab').removeClass('tab-on');
   $('.tabs-content').removeClass('tab-on');
@@ -52,7 +37,7 @@ $('ul li.star-tab').click(function(){
 })
 
 $('ul li.tab-off').click(function(){
-  let tab_on = $(this)[0].getAttribute('data');
+  var tab_on = $(this)[0].getAttribute('data');
 
   $('ul li.tab-off').removeClass('tab-on');
   $('#educacion div').removeClass('tab-on');
@@ -61,7 +46,26 @@ $('ul li.tab-off').click(function(){
   $("#"+tab_on).addClass('tab-on');
 })
 
-/* NO JQUERYUI TABS */
+/* WHYYY DON'T WORK ??  !!!!
+
+const startab = document.querySelector("ul li.star-tab");
+const tabcontent = document.querySelector(".tabs-content");
+
+function lumusTab () {
+  var tab_id = $(this).attr("data-tab");
+
+  startab.removeClass("tab-on");
+  $(".tabs-content").removeClass("tab-on");
+
+  $(this).addClass("tab-on");
+  $("#"+tab_id).addClass("tab-on");
+}
+
+startab.addEventListener('click', lumusTab); 
+
+*/
+
+/* JQUERY TABS */
 
 /* EXPERIENCE CLOSER */
 
@@ -92,8 +96,8 @@ closericon6.addEventListener('click', closeBox);
 
 /* STICKY MENU */
 
-let stickynav = document.getElementById("sticky-nav");
-let sticky = stickynav.offsetTop;
+var stickynav = document.getElementById("sticky-nav");
+var sticky = stickynav.offsetTop;
 
 function stickyNav() {
   (window.pageYOffset) >= sticky ? stickynav.classList.add("sticky") : stickynav.classList.remove("sticky");

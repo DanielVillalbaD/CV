@@ -147,11 +147,6 @@ nav > .overlay > ul > li a {
 }
 
 .blink {
-  width: 99%;
-  height: 99%;
-  position: absolute;
-  left: 0px;
-  top: 0px;
   border-color: #00edff;
   border-style: solid;
   border-width: 1px;
@@ -162,6 +157,8 @@ nav > .overlay > ul > li a {
   -moz-transition-duration: 0.3s;
   -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  animation: blink 9s step-start 0s infinite;
+  -webkit-animation: blink 9s step-start 0s infinite;
 }
 
 .sticky-menu li:nth-child(2) >.blink {
@@ -256,11 +253,7 @@ nav > .overlay > ul > li a {
   97% { opacity: .8;}
   100% { opacity: .9;}
 }
-.sticky-menu li:hover
-.blink {
-  animation: blink 9s step-start 0s infinite;
-  -webkit-animation: blink 9s step-start 0s infinite;
-}
+
 
 /* START RESPONSIVE ICONS */
 
@@ -546,9 +539,8 @@ nav > .overlay > ul > li a:hover::after {
   overflow: hidden;
 }
 header > .header-full {
-  width: 100%;
-  height: 100%;
   background: #010101;
+  height: 100vh;
   background-image: url(../img/yo-en-battlefront.jpg);
   background-repeat: no-repeat;
   background-size: cover;

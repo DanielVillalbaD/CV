@@ -447,6 +447,20 @@ input:checked + section.experience-box .box-title:before {
   width: 100%;
 }
 
+.box-title {
+	height: 3rem;
+	line-height: 3rem;
+}
+
+.box-content {
+	width: calc(100% - 2rem);
+	padding: 1.6rem 1.45rem;
+}
+
+.experience-box {
+  height: 3rem;
+}
+
 @media screen and (max-width: 450px) {
   .tabs-content {
     padding: .5rem .6rem;
