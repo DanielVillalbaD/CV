@@ -1,50 +1,96 @@
 /**** SCROLL SPY ****/
 
 var acumulativeOffset = function(element) {
-    var top = 0;
-  
-    do {
-      top += element.offsetTop || 0;
-      element = element.offsetParent;
-    } while (element);
-  
-    return top + 100;
-  };
-  
-  function menuActive(event) {
-    var portadaOffset = acumulativeOffset(document.getElementById("nav-container")) + 200;
-    var quienSoyOffset = acumulativeOffset(document.getElementById("about-me"));
-    var educacionOffset = acumulativeOffset(document.getElementById("edu-exp"));
-    var contactoOffset = acumulativeOffset(document.getElementById("contacto"));
-    var pageOffset = window.pageYOffset;
-  
-    if (pageOffset >= 0 && pageYOffset < portadaOffset) {
-      removeBlink();
-      document.getElementById("portadamen").classList.add("blink");
-    } else if (pageYOffset >= portadaOffset && pageYOffset < quienSoyOffset) {
-      removeBlink();
-      document.getElementById("aboutmen").classList.add("blink");
-    }  else if (pageYOffset >= quienSoyOffset && pageYOffset < educacionOffset && document.querySelector("[data='educacion']").classList.contains('tab-on')) {
-        removeBlink();
-        document.getElementById("educamen").classList.add("blink");
-    } else if (pageYOffset >= quienSoyOffset && pageYOffset < educacionOffset && document.querySelector("[data='experiencia']").classList.contains('tab-on')) {
-        removeBlink();
-        document.getElementById("expmen").classList.add("blink");
-    } else if (pageYOffset >= quienSoyOffset && pageYOffset < educacionOffset && document.querySelector("[data='sobre-mi']").classList.contains('tab-on')) {
-        removeBlink();
-        document.getElementById("videomen").classList.add("blink");
-    }else if (pageYOffset >= educacionOffset && pageYOffset < contactoOffset) {
-      removeBlink();
-      document.getElementById("contactmen").classList.add("blink");
+  var top = 0;
+
+  do {
+    top += element.offsetTop || 0;
+    element = element.offsetParent;
+  } while (element);
+
+  return top + 100;
+};
+
+var previous;
+
+function menuActive(event) {
+  var portadaOffset =
+    acumulativeOffset(document.getElementById("nav-container")) + 200;
+  var quienSoyOffset = acumulativeOffset(document.getElementById("about-me"));
+  var educacionOffset = acumulativeOffset(document.getElementById("edu-exp"));
+  var contactoOffset = acumulativeOffset(document.getElementById("contacto"));
+  var pageOffset = window.pageYOffset;
+
+  if (pageOffset >= 0 && pageOffset < portadaOffset) {
+    if(!previous || previous !== 1) {
+      previous = 1;
+    } else {
+      return false;
     }
+    
+    removeBlink();
+    document.getElementById("portadamen").classList.add("blink");
+  } else if (pageOffset >= portadaOffset && pageOffset < quienSoyOffset) {
+    if(!previous || previous !== 2) {
+      previous = 2;
+    } else {
+      return false;
+    }
+    removeBlink();
+    document.getElementById("aboutmen").classList.add("blink");
+  } else if (
+    pageOffset >= quienSoyOffset &&
+    pageOffset < educacionOffset &&
+    document.querySelector("[data='educacion']").classList.contains("tab-on")
+  ) {
+    if(!previous || previous !== 3) {
+      previous = 3;
+    } else {
+      return false;
+    }
+    removeBlink();
+    document.getElementById("educamen").classList.add("blink");
+  } else if (
+    pageOffset >= quienSoyOffset &&
+    pageOffset < educacionOffset &&
+    document.querySelector("[data='experiencia']").classList.contains("tab-on")
+  ) {
+    if(!previous || previous !== 3) {
+      previous = 3;
+    } else {
+      return false;
+    }
+    removeBlink();
+    document.getElementById("expmen").classList.add("blink");
+  } else if (
+    pageOffset >= quienSoyOffset &&
+    pageOffset < educacionOffset &&
+    document.querySelector("[data='sobre-mi']").classList.contains("tab-on")
+  ) {
+    if(!previous || previous !== 3) {
+      previous = 3;
+    } else {
+      return false;
+    }
+    removeBlink();
+    document.getElementById("videomen").classList.add("blink");
+  } else if (pageOffset >= educacionOffset && pageOffset < contactoOffset) {
+    if(!previous || previous !== 4) {
+      previous = 4;
+    } else {
+      return false;
+    }
+    removeBlink();
+    document.getElementById("contactmen").classList.add("blink");
   }
-  
-  window.addEventListener("scroll", menuActive);
-  
-  /**** SCROLL SPY ****/
+}
+
+window.addEventListener("scroll", menuActive);
+
+/**** SCROLL SPY ****/
 /**** SMOOTH TRANSITION ****/
 
-var navItems = document.querySelectorAll("ul.sticky-ul li a");
+var navItems = document.querySelectorAll("ul.navigation li a");
 
 for (var i = 0; i < navItems.length; i++) {
   navItems[i].addEventListener("click", getElementsToGo);

@@ -1,14 +1,30 @@
 /* SABER LASER */
 
-$(".toggle-icon").click(function() {
-  $(".overlay").toggleClass("anim");
-});
+var saberLaser = document.getElementsByClassName("toggle-icon")[0];
+var overlayHref = document.querySelectorAll(".overlay ul li a");
 
-$(".toggle-icon").click(function() {
-  $("#nav-container").toggleClass("pushed");
-});
+function overlayAnim () {
+  document.getElementsByClassName("overlay")[0].classList.toggle("anim");
+};
 
-/* SABER LASER */
+function saberTransform () {
+  document.getElementById("nav-container").classList.toggle("pushed");
+};
+
+function bothTransforms () {
+  overlayAnim();
+  saberTransform();
+}
+
+for (var i = 0; i < overlayHref.length; i++) {
+  overlayHref[i].addEventListener("click", bothTransforms);
+}
+
+saberLaser.addEventListener('click', overlayAnim);
+saberLaser.addEventListener('click', saberTransform);
+
+
+/* FIN SABER LASER */
 /* IMG MOUSE MOVEMENT */
 /* BACK LATER
 var bfParody = document.querySelector('.header-full img');
@@ -35,6 +51,8 @@ $("ul li.star-tab").click(function() {
   $(this).addClass("tab-on");
   $("#" + tab_on).addClass("tab-on");
 
+  /* SYNCHRONIZATION WITH STICKY MENU*/
+
   removeBlink();
   if (tab_on === "educacion") {
     document.getElementById("educamen").classList.add("blink");
@@ -46,6 +64,8 @@ $("ul li.star-tab").click(function() {
 
 });
 
+  /* FIN SYNCHRONIZATION WITH STICKY MENU*/
+
 $("ul li.tab-off").click(function() {
   var tab_on = $(this)[0].getAttribute("data");
 
@@ -56,7 +76,7 @@ $("ul li.tab-off").click(function() {
   $("#" + tab_on).addClass("tab-on");
 });
 
-/* JQUERY TABS */
+/* FIN JQUERY TABS */
 /* EXPERIENCE CLOSER */
 
 const closericon = document.querySelector(".box-close");
