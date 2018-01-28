@@ -44,6 +44,7 @@ input[type="checkbox"] {
 input[type="checkbox"] + label {
     vertical-align: middle;
     font-size: 1rem;
+    cursor: pointer;
 }
 
 input[type="checkbox"] + label span {
@@ -165,6 +166,18 @@ p.name-help, p.email-help, p.phone-help, p.whoknown-help, p.comment-help, p.othe
 p.validation-error {
     display: block;
     padding-bottom: .8rem;
+}
+
+div.response-container {
+    width: 100;
+    text-align: center;
+    padding: 2rem;
+}
+
+p.response {
+    font-size: 1.1rem;
+    line-height: 1.2rem;
+    color: #333;
 }
 
 @media screen and (max-width: 462px) {

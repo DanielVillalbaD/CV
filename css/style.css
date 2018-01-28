@@ -653,6 +653,19 @@ header > .header-full {
 
 /* FIN SOCIAL MEDIA */
 /* FIN HEADER */
+
+footer {
+  width: 100%;
+  background: #181818;
+  text-align: center;
+}
+
+footer p {
+  color: #fafafa;
+  font-size: 1rem;
+  line-height: 4rem;
+}
+
 /* QUERIES */
 
 @media screen and (max-width: 1366px) {

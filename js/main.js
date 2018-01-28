@@ -78,12 +78,14 @@ $("ul li.tab-off").click(function() {
 /* FIN JQUERY TABS */
 /* EXPERIENCE CLOSER */
 
-const closericon = document.querySelector(".box-close");
-const closericon2 = document.querySelector(".sd-closer");
-const closericon3 = document.querySelector(".td-closer");
-const closericon4 = document.querySelector(".st-closer-2");
-const closericon5 = document.querySelector(".sd-closer-2");
-const closericon6 = document.querySelector(".td-closer-2");
+// I Will Back to improve you
+
+var closericon = document.querySelector(".box-close");
+var closericon2 = document.querySelector(".sd-closer");
+var closericon3 = document.querySelector(".td-closer");
+var closericon4 = document.querySelector(".st-closer-2");
+var closericon5 = document.querySelector(".sd-closer-2");
+var closericon6 = document.querySelector(".td-closer-2");
 
 function closeBox() {
   $("#exp1").prop("checked", false);
@@ -120,17 +122,17 @@ window.onscroll = function() {
 
 //GET ELEMENTS
 
-const player = document.querySelector(".player");
-const video = player.querySelector(".viewer");
-const playerToggle = player.querySelector(".playertoggle");
-const mute = player.querySelector(".mute-button");
-const playerIcon = player.querySelector(".fa-play");
-const expand = player.querySelector('.fa-expand');
+var player = document.querySelector(".player");
+var video = player.querySelector(".viewer");
+var playerToggle = player.querySelector(".playertoggle");
+var mute = player.querySelector(".mute-button");
+var playerIcon = player.querySelector(".fa-play");
+var expand = player.querySelector('.fa-expand');
 
 //FUNCTIONS
 
 function togglePlay() {
-  const method = video.paused ? "play" : "pause";
+  var method = video.paused ? "play" : "pause";
   video[method]();
   playerIcon.classList.toggle("fa-pause");
 }
@@ -141,9 +143,9 @@ function mutePush() {
   } else {
     $("video").prop("muted", true);
   }
-  const muteON = '<i class="fa fa-volume-up"></i>';
-  const muteOFF = '<i class="fa fa-volume-off"></i>';
-  const muteicon = $("video").prop("muted") ? muteOFF : muteON;
+  var muteON = '<i class="fa fa-volume-up"></i>';
+  var muteOFF = '<i class="fa fa-volume-off"></i>';
+  var muteicon = $("video").prop("muted") ? muteOFF : muteON;
   mute.innerHTML = muteicon;
 }
 
@@ -207,10 +209,11 @@ checkInputs.opt4.addEventListener('click', function() {
 
 form.addEventListener('submit', function(event) {
 
+  event.preventDefault();
+
   if (nameInput.checkValidity() === false) {
     nameError.classList.add('validation-error');
     nameInput.focus();
-    event.preventDefault();
     return false;
   } else {
     nameError.classList.remove('validation-error');
@@ -224,7 +227,6 @@ form.addEventListener('submit', function(event) {
   if (resultEmailValidation === false) {
     emailError.classList.add('validation-error');
     emailInput.focus();
-    event.preventDefault();
     return false;
   } else {
     emailError.classList.remove('validation-error');
@@ -233,7 +235,6 @@ form.addEventListener('submit', function(event) {
   if (resultPhoneValidation === false) {
     phoneError.classList.add('validation-error');
     telInput.focus();
-    event.preventDefault();
     return false;
   } else {
     phoneError.classList.remove('validation-error');
@@ -243,14 +244,12 @@ form.addEventListener('submit', function(event) {
     inputError.classList.remove('validation-error');
   } else {
     inputError.classList.add('validation-error');
-    event.preventDefault();
     return false;
   }
 
   if (other.checkValidity() === false) {
     otherError.classList.add('validation-error');
     other.focus();
-    event.preventDefault();
     return false;
   } else {
     otherError.classList.remove('validation-error');
@@ -262,12 +261,42 @@ form.addEventListener('submit', function(event) {
   if (commentInput.checkValidity() === false || wordsCount.length > maxWords) {
     commentError.classList.add('validation-error');
     commentInput.focus();
-    event.preventDefault();
+    
     return false;
   } else {
     commentError.classList.remove('validation-error');
   }
 
+  /*
+  POR DIOS, ¿CÓMO HAGO ESTO? SERGIO PLEASE, ILÚSTRAME
+  var optsChecked = "";
+
+  for (var i = 0; i <= checkInputs.length; i++) {
+    if (this.checked) {
+      optsChecked = optsChecked.concat("," + this.value);
+    }
+  }
+*/
+/* OTRA PRUEBA SIN ÉXITO
+  var selectedOpts = ""; 
+
+  for (var options in checkInputs){
+    if (options.checked) {
+      console.log(options);
+    }
+  };
+*/
+
+  var data = {
+    Name: nameInput.value,
+    Email: emailInput.value,
+    Phone: telInput.value,
+    From: "No consigo recuperarlo, parezco Jar Jar",
+    Other: other.value,
+    Comment: commentInput.value,
+};
+  createData(data);
 });
+
 
 /* CONTACT FORM */
