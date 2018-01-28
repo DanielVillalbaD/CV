@@ -4,6 +4,8 @@ This is a practice for the Keep Coding Web Developer Bootcamp
 
 Please, *stay away* if you aren't freak as keepcoders.
 
+Para probar la petición Ajax, deberás cargar la página en localhost:8000
+
 Si amas Star Wars, por favor, no me lo tengas en cuenta, sé que esto es 
 un tributo de "mierda", lo iré mejorando, pero para la entrega de la 
 práctica no me ha dado tiempo a más, lo siento!.
