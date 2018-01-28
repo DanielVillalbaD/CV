@@ -20,8 +20,7 @@ for (var i = 0; i < overlayHref.length; i++) {
   overlayHref[i].addEventListener("click", bothTransforms);
 }
 
-saberLaser.addEventListener('click', overlayAnim);
-saberLaser.addEventListener('click', saberTransform);
+saberLaser.addEventListener('click', bothTransforms);
 
 
 /* FIN SABER LASER */
@@ -126,8 +125,7 @@ const video = player.querySelector(".viewer");
 const playerToggle = player.querySelector(".playertoggle");
 const mute = player.querySelector(".mute-button");
 const playerIcon = player.querySelector(".fa-play");
-//const expand = player.querySelector('.fa-expand');
-//const compress = player.querySelector('.expand-video');
+const expand = player.querySelector('.fa-expand');
 
 //FUNCTIONS
 
@@ -149,9 +147,27 @@ function mutePush() {
   mute.innerHTML = muteicon;
 }
 
+function fullScreen(el) {
+  if(el.requestFullScreen) {
+    el.requestFullScreen();
+  } else if (el.mozRequestFullScreen) {
+    el.mozRequestFullScreen();
+  } else if (el.webkitRequestFullScreen) {
+    el.webkitRequestFullScreen();
+  } else if (el.msRequestFullScreen) {
+    el.msRequestFullScreen();
+  }
+}
+
+function expandVideo() {
+  fullScreen(video);
+  video.play();
+}
+
+
 //EVENT LISTENERS
 
-// expand.addEventListener('click', expandToggle);
+expand.addEventListener('click', expandVideo);
 video.addEventListener("click", togglePlay);
 mute.addEventListener("click", mutePush);
 playerToggle.addEventListener("click", togglePlay);
