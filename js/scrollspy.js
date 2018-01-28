@@ -21,21 +21,22 @@ function menuActive(event) {
   var contactoOffset = acumulativeOffset(document.getElementById("contacto"));
   var pageOffset = window.pageYOffset;
 
-  if (pageOffset >= 0 && pageOffset < portadaOffset) {
-    if(!previous || previous !== 1) {
-      previous = 1;
+  /*Como sé que no es obligatorio y como verás en la consola que minScript no funciona, si me
+  pudieras explicar por qué, le he dado unas cuantas vueltas... pero.. */
+  function minScript(val) {
+    if(!previous || previous !== val) {
+      previous = val;
     } else {
       return false;
     }
-    
+  }
+
+  if (pageOffset >= 0 && pageOffset < portadaOffset) {   
+    minScript(1);
     removeBlink();
     document.getElementById("portadamen").classList.add("blink");
   } else if (pageOffset >= portadaOffset && pageOffset < quienSoyOffset) {
-    if(!previous || previous !== 2) {
-      previous = 2;
-    } else {
-      return false;
-    }
+    minScript(2);
     removeBlink();
     document.getElementById("aboutmen").classList.add("blink");
   } else if (
@@ -43,11 +44,7 @@ function menuActive(event) {
     pageOffset < educacionOffset &&
     document.querySelector("[data='educacion']").classList.contains("tab-on")
   ) {
-    if(!previous || previous !== 3) {
-      previous = 3;
-    } else {
-      return false;
-    }
+    minScript(3);
     removeBlink();
     document.getElementById("educamen").classList.add("blink");
   } else if (
@@ -55,11 +52,7 @@ function menuActive(event) {
     pageOffset < educacionOffset &&
     document.querySelector("[data='experiencia']").classList.contains("tab-on")
   ) {
-    if(!previous || previous !== 3) {
-      previous = 3;
-    } else {
-      return false;
-    }
+    minScript(3);
     removeBlink();
     document.getElementById("expmen").classList.add("blink");
   } else if (
@@ -67,19 +60,11 @@ function menuActive(event) {
     pageOffset < educacionOffset &&
     document.querySelector("[data='sobre-mi']").classList.contains("tab-on")
   ) {
-    if(!previous || previous !== 3) {
-      previous = 3;
-    } else {
-      return false;
-    }
+    minScript(3);
     removeBlink();
     document.getElementById("videomen").classList.add("blink");
   } else if (pageOffset >= educacionOffset && pageOffset < contactoOffset) {
-    if(!previous || previous !== 4) {
-      previous = 4;
-    } else {
-      return false;
-    }
+    minScript(4);
     removeBlink();
     document.getElementById("contactmen").classList.add("blink");
   }

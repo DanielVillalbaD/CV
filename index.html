@@ -198,20 +198,23 @@
     </section>
 
     <section id="contacto">
-        <form class="form" method="post" action="" novalidate>
-            <input type="text" name="name" class="name" placeholder="Nombre">
-                    <p class="name-help">Mensaje nombre.</p>
+        <form class="form" method="get" novalidate>
+            <input type="text" name="name" class="name" placeholder="Nombre" required>
+                <p class="name-help">No me dejes vacío hombre...</p>
             <input type="email" name="email" class="email" placeholder="Email">
-            <input type="tel" name="telephone" class="tel" placeholder="Teléfono">
-                <p class="email-help">Mensaje email.</p>        
-                <p class="phone-help">Mensaje teléfono.</p>
-            <div><input type="checkbox" name="st_check" class="cbox1" value="Searchers"> <label for="cbox1"><span></span>Buscadores</label></div>
-            <div><input type="checkbox" name="sd_check" class="cbox2" value="Recomendation"> <label for="cbox2"><span></span>Recomendación</label></div>
-            <div><input type="checkbox" name="td_check" class="cbox3" value="knowme"> <label for="cbox3"><span></span>Me conoces</label></div>
-            <div><input type="checkbox" name="fd_check" class="cbox4" value="Other"> <label for="cbox4"><span></span>Otros</label></div>                    
-                    <p class="whoknown-help">Mensaje checkbox.</p>
-            <textarea name="user_comment" class="comment" placeholder="Por favor, escriba en 150 carácteres el motivo que le concierne" rows="6"></textarea>
-                <p class="comment-help">Mensaje comment.</p>
+            <input type="tel" name="telephone" class="tel" placeholder="Teléfono" required>
+                <p class="email-help">Por favor, introduzca un email correcto.</p>        
+                <p class="phone-help">Por favor, introduzca un número de teléfono correcto.</p>
+            <p class="check-explain">¿Cómo me has encontrado?</p>
+            <div><input type="checkbox" name="freak_check" id="cbox1" value="Rebeldes"> <label for="cbox1"><span></span>Alianza Rebelde</label></div>
+            <div><input type="checkbox" name="freak_check" id="cbox2" value="Imperio"> <label for="cbox2"><span></span>Del Imperio</label></div>
+            <div><input type="checkbox" name="freak_check" id="cbox3" value="Academia"> <label for="cbox3"><span></span>Academia Jedi</label></div>
+            <div><input type="checkbox" name="freak_check" id="cbox4" value="Other"> <label for="cbox4"><span></span>Otros</label></div>
+            <input type="text" name="other" class="other" placeholder="¿Cómo? ¿Dónde? ¿Cuándo?">
+                <p class="other-help">Por favor, ¡Dímelo!</p>                    
+                    <p class="whoknown-help">Elige al menos una opción.</p>
+            <textarea name="user_comment" class="comment" placeholder="Por favor, escriba en un máximo de 150 palabras el motivo que le concierne" rows="6" required></textarea>
+                <p class="comment-help">Por favor, responde a esta pregunta sin sobrepasar las 150 palabras.</p>
             <div class="custom-submit">
                 <div id="line1"></div>
                 <div id="line2"></div>

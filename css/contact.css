@@ -32,7 +32,7 @@ input[type="text"], input[type="email"], input[type="tel"], textarea {
     text-shadow:rgba(0, 0, 0, 0.06) 0px 1px 5px;
     font-size: .9rem;
     outline: none;
-    margin: 1.1rem 0;
+    margin: .6rem 0;
 }
 
 input[type="checkbox"] {
@@ -136,7 +136,44 @@ input[type="submit"] {
       background-color: #333; 
 }
 
-p.name-help, p.email-help, p.phone-help, p.comment-help, p.whoknown-help {
+p.check-explain {
     width: 100%;
     display: block;
+    padding: .8rem 0;
+}
+
+form > div {
+    min-width: 200px;
+    padding: .17rem 0;
+}
+
+p.name-help, p.email-help, p.phone-help, p.whoknown-help, p.comment-help, p.other-help {
+    width: 100%;
+    display: none;
+    font-size: .9rem;
+    color: red;
+}
+
+.other {
+    display: none;
+}
+
+.other-checked {
+    display: block;
+}
+
+p.validation-error {
+    display: block;
+    padding-bottom: .8rem;
+}
+
+@media screen and (max-width: 462px) {
+    input[type="email"], input[type="tel"] {
+        width: 100%;
+    }
+
+    form > div {
+        min-width: 180px;
+    }
+    
 }
