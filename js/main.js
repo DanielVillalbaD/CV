@@ -223,6 +223,9 @@ form.addEventListener('submit', function(event) {
   var telRegex = /^(\+34|0034|34)?[6|7|9][0-9]{8}$/;
   var resultEmailValidation = emailRegex.test(emailInput.value);
   var resultPhoneValidation = telRegex.test(telInput.value);
+  var resultCommentValidation = commentInput.value.match(/\S+/g);
+  
+  console.log(resultCommentValidation);
 
   if (resultEmailValidation === false) {
     emailError.classList.add('validation-error');
@@ -255,17 +258,23 @@ form.addEventListener('submit', function(event) {
     otherError.classList.remove('validation-error');
   }
 
-  var maxWords = 150;
-  var wordsCount = commentInput.value.split(/[\s]+/);
+  
+  if (resultCommentValidation.length > 150) {
+    commentError.classList.add('validation-error');
+    commentInput.focus();
+    return false;
+  } else {
+    commentError.classList.remove('validation-error');
+  }
 
-  if (commentInput.checkValidity() === false || wordsCount.length > maxWords) {
+ /* if (commentInput.checkValidity() === false || wordsCount.length > maxWords) {
     commentError.classList.add('validation-error');
     commentInput.focus();
     
     return false;
   } else {
     commentError.classList.remove('validation-error');
-  }
+  }*/
 
   /*
   POR DIOS, ¿CÓMO HAGO ESTO? SERGIO PLEASE, ILÚSTRAME
@@ -276,16 +285,16 @@ form.addEventListener('submit', function(event) {
       optsChecked = optsChecked.concat("," + this.value);
     }
   }
-*/
-/* OTRA PRUEBA SIN ÉXITO
-  var selectedOpts = ""; 
+  */
+  /* OTRA PRUEBA SIN ÉXITO
+    var selectedOpts = ""; 
 
-  for (var options in checkInputs){
-    if (options.checked) {
-      console.log(options);
-    }
-  };
-*/
+    for (var options in checkInputs){
+      if (options.checked) {
+        console.log(options);
+      }
+    };
+  */
 
   var data = {
     Name: nameInput.value,
@@ -294,8 +303,9 @@ form.addEventListener('submit', function(event) {
     From: "No consigo recuperarlo, parezco Jar Jar",
     Other: other.value,
     Comment: commentInput.value,
-};
+  };
   createData(data);
+  
 });
 
 
